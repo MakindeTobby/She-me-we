@@ -25,6 +25,7 @@ window.onload = function () {
   gsap.to('.img-container', {
     scale: 52,
     ease: "ease",
+    opacity: 0,
     scrollTrigger: {
       trigger: '.video-section',
       scrub: 1,
@@ -83,7 +84,7 @@ window.onload = function () {
     animation: tl,
     trigger: '.wrapper',
     start: "top top",
-    end: "+=600",
+    end: "+=200",
     scrub: 1,
     pin: true,
     ease: "ease"

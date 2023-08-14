@@ -33,7 +33,7 @@ body {
 .p {
 
     font-family: 'b', cursive;
-    font-size: 15rem;
+    font-size: 18rem;
     /* font-weight: bold; */
     /* line-height: 1.2; */
     /* color: transparent; */
@@ -77,7 +77,7 @@ body {
     width: 200px;
     height: 200px;
     border: 5px solid rgba(255, 255, 255, 0.2);
-    border-top: 5px solid #fff;
+    border-top: 5px solid #777;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     /* Add rotation animation */
@@ -190,7 +190,9 @@ section {
 
 .section {
     background-color: #141414;
-    padding: 7rem;
+    /* padding: 7rem; */
+    overflow: hidden;
+    /* height: 100vh; */
 }
 
 .boxes-container {
@@ -336,6 +338,10 @@ section {
 
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .box3 .col-1 img:nth-child(2) {
     width: 180px;
     height: 200px;
@@ -450,7 +456,7 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     padding: 4rem;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .tv {
@@ -554,3 +560,8 @@ footer {
     transform: translateX(0);
     /* Move the content back to its original position */
 }
+
+/* .me-text {
+    position: absolute;
+    z-index: 99;
+} */
