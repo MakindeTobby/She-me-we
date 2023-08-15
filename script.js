@@ -123,20 +123,33 @@ window.onload = function () {
   });
 
 
-  const newSection = document.querySelector(".fade-from-right .section-content");
+  // ... (your existing code)
 
-  gsap.to(newSection, {
-    opacity: 1,
-    x: 0,
-    scrollTrigger: {
-      trigger: newSection,
-      start: "top 80%",
-      end: "center center",
-      scrub: true,
-      toggleClass: "show", // Toggle the 'show' class on scroll
-      // markers: true
-    }
+  // Create a timeline for animations for the new section
+  const newSectionTimeline = gsap.timeline();
+
+  newSectionTimeline.from('.new-section .left-side div', {
+    y: 150,
+    opacity: 0,
+    stagger: {
+      amount: 0.4
+    },
+    delay: 0.5
+  }).from('.new-section .right-side', { opacity: 0, duration: 2 }, 0.5)
+    .to('.new-section-wrapper', { x: -window.innerWidth });
+
+  // Create a ScrollTrigger animation for the new section timeline
+  ScrollTrigger.create({
+    animation: newSectionTimeline,
+    trigger: '.new-section-wrapper',
+    start: "top top",
+    end: "+=200",
+    scrub: 1,
+    pin: true,
+    ease: "ease"
   });
+
+  // ... (your existing code)
 
 
 };
