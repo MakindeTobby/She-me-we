@@ -565,3 +565,28 @@ footer {
     position: absolute;
     z-index: 99;
 } */
+
+
+.spinner-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    animation: spin 6s linear infinite;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.spinner-letter {
+    position: absolute;
+    transform-origin: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
