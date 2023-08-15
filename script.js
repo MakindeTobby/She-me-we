@@ -56,14 +56,14 @@ window.onload = function () {
   });
 
   // Animate '.txt-bottom' element to fade out and adjust letter spacing
-  gsap.to('.txt-bottom', {
-    autoAlpha: 0,
-    letterSpacing: -10,
-    duration: 2,
-    scrollTrigger: {
-      start: 2
-    }
-  });
+  // gsap.to('.txt-bottom', {
+  //   autoAlpha: 0,
+  //   letterSpacing: -10,
+  //   duration: 2,
+  //   scrollTrigger: {
+  //     start: 2
+  //   }
+  // });
 
   // Create a timeline for animations
   const tl = gsap.timeline();
@@ -90,64 +90,64 @@ window.onload = function () {
     ease: "ease"
   });
 
-  // Apply animations to elements with class '.col'
-  gsap.utils.toArray('.col').forEach(image => {
-    gsap.fromTo(image, {
-      opacity: .3,
-      x: 0
-    }, {
-      opacity: 1,
-      x: -50,
-      scrollTrigger: {
-        trigger: image,
-        start: "10%",
-        stagger: {
-          amount: .4
-        }
-      }
-    });
-  });
+  // // Apply animations to elements with class '.col'
+  // gsap.utils.toArray('.col').forEach(image => {
+  //   gsap.fromTo(image, {
+  //     opacity: .3,
+  //     x: 0
+  //   }, {
+  //     opacity: 1,
+  //     x: -50,
+  //     scrollTrigger: {
+  //       trigger: image,
+  //       start: "10%",
+  //       stagger: {
+  //         amount: .4
+  //       }
+  //     }
+  //   });
+  // });
 
-  // Create a timeline for further animations
-  const timeline = gsap.timeline();
+  // // Create a timeline for further animations
+  // const timeline = gsap.timeline();
 
-  // Animate '.title span' elements with skewY and position changes
-  timeline.from('.title span', {
-    y: 150,
-    skewY: 7,
-    duration: 3
-  }).from('.txt-bottom', {
-    letterSpacing: -10,
-    opacity: 0,
-    duration: 3
-  });
+  // // Animate '.title span' elements with skewY and position changes
+  // timeline.from('.title span', {
+  //   y: 150,
+  //   skewY: 7,
+  //   duration: 3
+  // }).from('.txt-bottom', {
+  //   letterSpacing: -10,
+  //   opacity: 0,
+  //   duration: 3
+  // });
 
 
   // ... (your existing code)
 
   // Create a timeline for animations for the new section
-  const newSectionTimeline = gsap.timeline();
+  // const newSectionTimeline = gsap.timeline();
 
-  newSectionTimeline.from('.new-section .left-side div', {
-    y: 150,
-    opacity: 0,
-    stagger: {
-      amount: 0.4
-    },
-    delay: 0.5
-  }).from('.new-section .right-side', { opacity: 0, duration: 2 }, 0.5)
-    .to('.new-section-wrapper', { x: -window.innerWidth });
+  // newSectionTimeline.from('.new-section .left-side div', {
+  //   y: 150,
+  //   opacity: 0,
+  //   stagger: {
+  //     amount: 0.4
+  //   },
+  //   delay: 0.5
+  // }).from('.new-section .right-side', { opacity: 0, duration: 2 }, 0.5)
+  //   .to('.new-section-wrapper', { x: -window.innerWidth });
 
-  // Create a ScrollTrigger animation for the new section timeline
-  ScrollTrigger.create({
-    animation: newSectionTimeline,
-    trigger: '.new-section-wrapper',
-    start: "top top",
-    end: "+=200",
-    scrub: 1,
-    pin: true,
-    ease: "ease"
-  });
+  // // Create a ScrollTrigger animation for the new section timeline
+  // ScrollTrigger.create({
+  //   animation: newSectionTimeline,
+  //   trigger: '.new-section-wrapper',
+  //   start: "top top",
+  //   end: "+=200",
+  //   scrub: 1,
+  //   pin: true,
+  //   ease: "ease"
+  // });
 
   // ... (your existing code)
 
