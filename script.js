@@ -77,14 +77,14 @@ window.onload = function () {
     },
     delay: .5
   }).from('.right-side', { opacity: 0, duration: 2 }, .5)
-    .to('.wrapper', { x: -window.innerWidth });
+    .to('.wrapper', { x: -window.innerWidth }).to('.section1', { x: -window.innerWidth }).to('.section2', { x: -window.innerWidth });
 
   // Create a ScrollTrigger animation for the timeline
   ScrollTrigger.create({
     animation: tl,
     trigger: '.wrapper',
     start: "top top",
-    end: "+=200",
+    end: "+=400",
     scrub: 1,
     pin: true,
     ease: "ease"
@@ -150,6 +150,8 @@ window.onload = function () {
   // });
 
   // ... (your existing code)
+
+
 
 
 };
