@@ -7,10 +7,11 @@
     box-sizing: border-box;
 }
 
+/* 
 @font-face {
     font-family: w;
     src: url(./fonts/WanoQuin-ExtraBold.otf);
-}
+} */
 
 @font-face {
     font-family: y;
@@ -25,15 +26,15 @@
 
 body {
     color: #fff;
-    font-family: 'y', sans-serif;
+    font-family: 'b', cursive;
     overflow-x: hidden;
     background-color: #141414;
 }
 
 .p {
 
-    font-family: 'b', cursive;
-    font-size: 18rem;
+    /* font-family: 'b', cursive; */
+    font-size: 19rem;
     /* font-weight: bold; */
     /* line-height: 1.2; */
     /* color: transparent; */
@@ -126,7 +127,7 @@ body {
     text-transform: capitalize;
     font-size: 30px;
     cursor: pointer;
-    font-family: w;
+    font-family: b;
 }
 
 li {
@@ -256,7 +257,7 @@ section {
 }
 
 .col-2 h1 {
-    font-family: w;
+    font-family: b;
     font-size: 100px;
     text-transform: capitalize;
     position: absolute;
@@ -390,7 +391,7 @@ footer {
 
 
 .title {
-    font-family: w;
+    font-family: b;
     width: 450px;
     position: relative;
     height: 110px;
@@ -458,7 +459,7 @@ footer {
 }
 
 .tv {
-    font-family: w;
+    font-family: b;
     display: flex;
     text-transform: capitalize;
 }

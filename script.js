@@ -9,7 +9,7 @@ window.onload = function () {
   // Fade out the dark background gradually
   gsap.to(darkBackground, {
     opacity: 0,
-    duration: 2, // Adjust the duration as needed
+    duration: 1, // Adjust the duration as needed
     onComplete: function () {
       // Once the fade-out is complete, hide the dark background
       darkBackground.style.display = 'none';
@@ -26,13 +26,13 @@ window.onload = function () {
     scale: 52,
     ease: "ease",
     opacity: 0,
-    scrollTrigger: {
-      trigger: '.video-section',
-      scrub: 1,
-      start: "top top",
-      end: "bottom",
-      pin: true
-    }
+    // scrollTrigger: {
+    //   trigger: '.video-section',
+    //   scrub: 1,
+    //   start: "top top",
+    //   end: "bottom",
+    //   pin: true
+    // }
   });
 
   // Animate '.right' element to fade out and move to the right
@@ -72,12 +72,12 @@ window.onload = function () {
   tl.from('.left-side div', {
     y: 150,
     opacity: 0,
-    stagger: {
-      amount: .4
-    },
+    // stagger: {
+    //   amount: .4
+    // },
     delay: .5
   }).from('.right-side', { opacity: 0, duration: 2 }, .5)
-    .to('.wrapper', { x: -window.innerWidth }).to('.section1', { x: -window.innerWidth }).to('.section2', { x: -window.innerWidth });
+    .to('.wrapper', { x: -window.innerWidth }).to('.section1', { x: -window.innerWidth }).to('.section2', { x: -window.innerWidth }).to('.section3', { x: -window.innerWidth });
 
   // Create a ScrollTrigger animation for the timeline
   ScrollTrigger.create({
