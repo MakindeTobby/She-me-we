@@ -1,4 +1,4 @@
-const mainTimeline = gsap.timeline({ repeat: -1 });
+const mainTimeline = gsap.timeline({ repeat: -1, });
 
 // Play the audio when the timeline starts
 const audio = document.getElementById('background-audio');
@@ -62,67 +62,46 @@ mainTimeline
 
 
 
-// Keep track of the current active section
-let activeSection = 'section1'; // Default to the first section
-
-// Add click event listeners to pronoun elements
-// const pronounElements = document.querySelectorAll('.p');
-// pronounElements.forEach(pronoun => {
-//     pronoun.addEventListener('click', () => {
-//         const sectionId = pronoun.getAttribute('data-section');
-//         showSection(sectionId);
-//     });
-// });
-
-// function showSection(sectionId) {
-//     // Pause the animation timeline
-//     mainTimeline.pause();
-
-//     // Hide the current active section
-//     const currentSection = document.getElementById(activeSection);
-//     currentSection.style.display = 'none';
-
-//     // Show the selected section
-//     const selectedSection = document.getElementById(sectionId);
-//     selectedSection.style.display = 'block';
-
-//     // Update the active section
-//     activeSection = sectionId;
-
-//     // Resume the animation timeline from the current label
-//     // mainTimeline.play(activeSection);
-// }
-
-function showSection(sectionId) {
-    // Hide all pages
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.add('hidden'));
-
-    // Show the selected section
-    const selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.remove('hidden');
-
-    // Pause the mainTimeline
-    mainTimeline.pause();
+function gotoSection1() {
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'block' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
 }
-
-// Get the elements for pronouns
-const pronounElements = document.querySelectorAll('.p .pointer');
-
-// Add click event listener to pronoun elements
-pronounElements.forEach(pronoun => {
-    pronoun.addEventListener('click', () => {
-        const sectionId = pronoun.getAttribute('data-section');
-        showSection(sectionId);
-    });
-});
-
-
-
-
-
-
-
+function gotoSection2() {
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'block' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
+function gotoSection3() {
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'block' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
+function gotoSection4() {
+    gsap.set('.page5', { display: 'block' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
+function gotoSection() {
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'block' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
 
 
 

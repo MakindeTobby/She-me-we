@@ -285,23 +285,23 @@ a {
 }
 
 .she:hover {
-    color: #fffada;
+    color: #FFFDD0;
 }
 
 .she:hover .he {
-    color: #fffada;
+    color: #FFFDD0;
 }
 
 .he:hover {
-    color: #fffada;
+    color: #FFFDD0;
 }
 
 .me:hover {
-    color: #fffada;
+    color: #FFFDD0;
 }
 
 .we:hover {
-    color: #fffada;
+    color: #FFFDD0;
 }
 
 /* Add a CSS class to change the color */
