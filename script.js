@@ -1,157 +1,189 @@
-// Register the ScrollTrigger plugin from GSAP
-gsap.registerPlugin(ScrollTrigger);
+const mainTimeline = gsap.timeline({ repeat: -1, });
 
-// When the window finishes loading, execute the provided function
-window.onload = function () {
-  // Find the element with class 'dark-background'
-  const darkBackground = document.querySelector('.dark-background');
+// Play the audio when the timeline starts
+const audio = document.getElementById('background-audio');
 
-  // Fade out the dark background gradually
-  gsap.to(darkBackground, {
-    opacity: 0,
-    duration: 1, // Adjust the duration as needed
-    onComplete: function () {
-      // Once the fade-out is complete, hide the dark background
-      darkBackground.style.display = 'none';
-    }
-  });
+document.querySelector('.page1').classList.remove('hidden');
+const playButton = document.querySelector('.play-btn');
 
-  // Set default ScrollTrigger behavior
-  ScrollTrigger.defaults({
-    toggleActions: "play none none reverse"
-  });
 
-  // Animate the scaling of '.img-container' element
-  gsap.to('.img-container', {
-    scale: 52,
-    ease: "ease",
-    opacity: 0,
-    // scrollTrigger: {
-    //   trigger: '.video-section',
-    //   scrub: 1,
-    //   start: "top top",
-    //   end: "bottom",
-    //   pin: true
-    // }
-  });
+const audioDuration = 1800; // 5000 milliseconds (5 seconds)
 
-  // Animate '.right' element to fade out and move to the right
-  gsap.to('.right', {
+function playAudioAndStop() {
+    audio.play();
+    setTimeout(() => {
+        audio.pause();
+        audio.currentTime = 0; // Reset audio to the beginning
+    }, audioDuration);
+}
+
+playButton.addEventListener('click', playAudioAndStop);
+
+
+mainTimeline
+    .addLabel('start')
+    .fromTo('.loading-spinner', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 360, duration: 2 })
+    .to('.page1', { opacity: 1, duration: 1 })
+    .to('.page1', { opacity: 0, duration: 1, delay: 5 })
+    .add(() => {
+
+        // Remove 'hidden' class and animate opacity to reveal page 2
+        document.querySelector('.page2').classList.remove('hidden');
+        gsap.to('.page2', { opacity: 1, duration: 1 });
+
+
+    })
+    .to('.page2', { opacity: 0, duration: 1, delay: 5 })
+    .add(() => {
+        // Remove 'hidden' class and animate opacity to reveal page 3
+        document.querySelector('.page3').classList.remove('hidden');
+        gsap.to('.page3', { opacity: 1, duration: 1 });
+    })
+    .to('.page3', { opacity: 0, duration: 1, delay: 5 })
+    .add(() => {
+        // Remove 'hidden' class and animate opacity to reveal page 4
+        document.querySelector('.page4').classList.remove('hidden');
+        gsap.to('.page4', { opacity: 1, duration: 1 });
+    })
+    .to('.page4', { opacity: 0, duration: 1, delay: 5 })
+    .add(() => {
+        // Remove 'hidden' class and animate opacity to reveal page 4
+        document.querySelector('.page5').classList.remove('hidden');
+        gsap.to('.page5', { opacity: 1, duration: 1 });
+    })
+    .to('.page5', { opacity: 0, duration: 1, delay: 5 })
+    .add(() => {
+        // Remove 'hidden' class and animate opacity to reveal page 1
+        document.querySelector('.page1').classList.remove('hidden');
+        gsap.to('.page1', { opacity: 1, duration: 1 });
+    })
+    .add(() => {
+        // Hide the spinner after all animations are done
+        gsap.set('.page5', { display: 'none' });
+        gsap.set('.page3', { display: 'none' });
+        gsap.set('.page4', { display: 'none' });
+        gsap.set('.page2', { display: 'none' });
+        gsap.set('.page1', { display: 'block' });
+        gsap.set('.loading-spinner', { display: 'none' });
+
+
+        mainTimeline.seek('start'); // Go back to the 'start' label after the last page animation
+        mainTimeline.pause(); // Pause the animation at the start
+
+        gsap.to('.page1', { opacity: 1, duration: 1 }); // Make sure page 1 is visible after the animation stops
+        // document.querySelector('.page1 video').play(); // Start playing video on page 1
+    });
+
+
+gsap.from('.we', {
     autoAlpha: 0,
     x: 500,
-    duration: 1.5,
-    scrollTrigger: {
-      start: 1
+    duration: 6,
+    onComplete: () => {
+        console.log('Animation for "we" completed on page load');
+        // Add your specific actions for the "we" animation here
     }
-  });
+});
 
-  // Animate '.left' element to fade out and move to the left
-  gsap.to('.left', {
+gsap.from('.s', {
     autoAlpha: 0,
     x: -500,
-    duration: 1.5,
-    scrollTrigger: {
-      start: 1
+    duration: 7,
+    onComplete: () => {
+        console.log('Animation for "s" completed on page load');
+        // Add your specific actions for the "s" animation here
     }
-  });
-
-  // Animate '.txt-bottom' element to fade out and adjust letter spacing
-  // gsap.to('.txt-bottom', {
-  //   autoAlpha: 0,
-  //   letterSpacing: -10,
-  //   duration: 2,
-  //   scrollTrigger: {
-  //     start: 2
-  //   }
-  // });
-
-  // Create a timeline for animations
-  const tl = gsap.timeline();
-
-  // Animate elements with class '.left-side div'
-  tl.from('.left-side div', {
-    y: 150,
-    opacity: 0,
-    // stagger: {
-    //   amount: .4
-    // },
-    delay: .5
-  }).from('.right-side', { opacity: 0, duration: 2 }, .5)
-    .to('.wrapper', { x: -window.innerWidth }).to('.section1', { x: -window.innerWidth }).to('.section2', { x: -window.innerWidth }).to('.section3', { x: -window.innerWidth });
-
-  // Create a ScrollTrigger animation for the timeline
-  ScrollTrigger.create({
-    animation: tl,
-    trigger: '.wrapper',
-    start: "top top",
-    end: "+=400",
-    scrub: 1,
-    pin: true,
-    ease: "ease"
-  });
-
-  // // Apply animations to elements with class '.col'
-  // gsap.utils.toArray('.col').forEach(image => {
-  //   gsap.fromTo(image, {
-  //     opacity: .3,
-  //     x: 0
-  //   }, {
-  //     opacity: 1,
-  //     x: -50,
-  //     scrollTrigger: {
-  //       trigger: image,
-  //       start: "10%",
-  //       stagger: {
-  //         amount: .4
-  //       }
-  //     }
-  //   });
-  // });
-
-  // // Create a timeline for further animations
-  // const timeline = gsap.timeline();
-
-  // // Animate '.title span' elements with skewY and position changes
-  // timeline.from('.title span', {
-  //   y: 150,
-  //   skewY: 7,
-  //   duration: 3
-  // }).from('.txt-bottom', {
-  //   letterSpacing: -10,
-  //   opacity: 0,
-  //   duration: 3
-  // });
+});
 
 
-  // ... (your existing code)
-
-  // Create a timeline for animations for the new section
-  // const newSectionTimeline = gsap.timeline();
-
-  // newSectionTimeline.from('.new-section .left-side div', {
-  //   y: 150,
-  //   opacity: 0,
-  //   stagger: {
-  //     amount: 0.4
-  //   },
-  //   delay: 0.5
-  // }).from('.new-section .right-side', { opacity: 0, duration: 2 }, 0.5)
-  //   .to('.new-section-wrapper', { x: -window.innerWidth });
-
-  // // Create a ScrollTrigger animation for the new section timeline
-  // ScrollTrigger.create({
-  //   animation: newSectionTimeline,
-  //   trigger: '.new-section-wrapper',
-  //   start: "top top",
-  //   end: "+=200",
-  //   scrub: 1,
-  //   pin: true,
-  //   ease: "ease"
-  // });
-
-  // ... (your existing code)
+function gotoSection1() {
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'block' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
+function gotoSection2() {
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'block' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
+function gotoSection3() {
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'block' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
+function gotoSection4() {
+    gsap.set('.page5', { display: 'block' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'none' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
+function gotoSection() {
+    mainTimeline.pause();
+    gsap.set('.page5', { display: 'none' });
+    gsap.set('.page3', { display: 'none' });
+    gsap.set('.page4', { display: 'none' });
+    gsap.set('.page2', { display: 'none' });
+    gsap.set('.page1', { display: 'block' });
+    gsap.set('.loading-spinner', { display: 'none' });
+}
 
 
 
 
-};
+
+
+
+
+let circle = document.querySelector('.circle');
+let follow = document.querySelector('.circle-follow');
+let links = document.querySelectorAll('a');
+
+function moveCircle(e) {
+    gsap.to(circle, { duration: 0.3, x: e.clientX, y: e.clientY });
+    gsap.to(follow, { duration: 0.7, x: e.clientX, y: e.clientY });
+}
+
+function hoverFunc() {
+    gsap.to(circle, { duration: 0.3, opacity: 1, scale: 0 });
+    gsap.to(follow, { duration: 0.3, scale: 3 });
+}
+
+function unhoverFunc() {
+    gsap.to(circle, { duration: 0.3, opacity: 1, scale: 1 });
+    gsap.to(follow, { duration: 0.3, scale: 1 });
+}
+
+window.addEventListener('mousemove', moveCircle);
+
+links.forEach(function (link) {
+    link.addEventListener('mouseenter', hoverFunc);
+    link.addEventListener('mouseleave', unhoverFunc);
+});
+
+
+// Get the elements for "s" and "he"
+const sElement = document.querySelector('.she');
+const heElement = document.querySelector('.he');
+
+// Add hover event listener to "s" element
+sElement.addEventListener('mouseover', () => {
+    // Add the color-change class to "he" element
+    heElement.classList.add('color-change');
+});
+
+sElement.addEventListener('mouseout', () => {
+    // Remove the color-change class from "he" element
+    heElement.classList.remove('color-change');
+});
+
