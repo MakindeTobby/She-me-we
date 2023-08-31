@@ -567,9 +567,10 @@ a {
     top: 15%;
 }
 
+
 .contentBx h1 {
-    font-family: y, Arial, Helvetica, sans-serif;
-    font-size: 5.5rem;
+    font-family: 'b', cursive;
+    font-size: 9rem;
     opacity: .8;
     transition: color .3s ease-in-out;
 }
