@@ -63,14 +63,15 @@ mainTimeline
         gsap.set('.page3', { display: 'none' });
         gsap.set('.page4', { display: 'none' });
         gsap.set('.page2', { display: 'none' });
-        gsap.set('.page1', { display: 'block' });
+        gsap.set('.page1', { display: 'none' });
+        gsap.set('.page6', { display: 'block' });
         gsap.set('.loading-spinner', { display: 'none' });
 
 
         mainTimeline.seek('start'); // Go back to the 'start' label after the last page animation
         mainTimeline.pause(); // Pause the animation at the start
 
-        gsap.to('.page1', { opacity: 1, duration: 1 }); // Make sure page 1 is visible after the animation stops
+        gsap.to('.page6', { opacity: 1, duration: 1 }); // Make sure page 1 is visible after the animation stops
         // document.querySelector('.page1 video').play(); // Start playing video on page 1
     });
 
@@ -97,6 +98,7 @@ gsap.from('.s', {
 
 
 function gotoSection1() {
+    gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
     gsap.set('.page4', { display: 'none' });
@@ -105,6 +107,7 @@ function gotoSection1() {
     gsap.set('.loading-spinner', { display: 'none' });
 }
 function gotoSection2() {
+    gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'block' });
     gsap.set('.page4', { display: 'none' });
@@ -113,6 +116,7 @@ function gotoSection2() {
     gsap.set('.loading-spinner', { display: 'none' });
 }
 function gotoSection3() {
+    gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
     gsap.set('.page4', { display: 'block' });
@@ -121,6 +125,7 @@ function gotoSection3() {
     gsap.set('.loading-spinner', { display: 'none' });
 }
 function gotoSection4() {
+    gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'block' });
     gsap.set('.page3', { display: 'none' });
     gsap.set('.page4', { display: 'none' });
@@ -130,11 +135,12 @@ function gotoSection4() {
 }
 function gotoSection() {
     mainTimeline.pause();
+    gsap.set('.page6', { display: 'block' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'none' });
-    gsap.set('.page1', { display: 'block' });
+    gsap.set('.page1', { display: 'none' });
     gsap.set('.loading-spinner', { display: 'none' });
 }
 
