@@ -29,16 +29,35 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: grayscale(1);
+        /* filter: grayscale(1); */
+        transition: opacity 0.5s ease-in-out;
+
     }
 
-    .greyscale {
+    /* .greyscale {
         filter: grayscale(100%);
     }
 
-    /* Enable sound */
     video.greyscale[muted] {
         filter: grayscale(100%) contrast(1);
+    } */
+
+    .text-overlay {
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        width: 0;
+        /* Start with width set to 0 */
+        opacity: 1;
+        /* Start with opacity set to 1 */
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+        overflow: hidden;
+        /* Hide overflowing text */
     }
 </style>
 
@@ -48,20 +67,79 @@
             Your browser does not support the video tag.
         </video>
     </div>
+    <div class="text-overlay" id="textOverlay">Text for Video</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 </body>
-<script>
+
+
+
+<script defer>
     const videoElement = document.getElementById('videoElement');
-    const videos = ['./media/world.mp4', './media/water.mp4', './media/flower.mp4'];
+    const textOverlay = document.getElementById('textOverlay');
+
+    const videos = [{
+            url: './media/world.mp4',
+            text: 'Exploring the World'
+        },
+        {
+            url: './media/water.mp4',
+            text: 'Underwater Beauty'
+        },
+        {
+            url: './media/flower.mp4',
+            text: 'Blooming Flowers'
+        },
+        {
+            url: './media/w-fire.mp4',
+            text: 'Clashing Elements'
+        }
+    ];
+
     let currentVideoIndex = 0;
 
-    function loadNextVideo() {
-        videoElement.src = videos[currentVideoIndex];
-        videoElement.play();
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    function playNextVideo() {
+        const currentVideoData = videos[currentVideoIndex];
+        const currentVideoUrl = currentVideoData.url;
+        const currentVideoText = currentVideoData.text;
+
+        console.log(`Playing video: ${currentVideoUrl}`);
+
+        // Create a timeline for the text transition
+        const textTimeline = gsap.timeline();
+
+        // Animate the text overlay's width from 0 to full width
+        textTimeline.to(textOverlay, {
+            width: '0',
+            duration: 4
+        });
+
+        textTimeline.call(() => {
+            // Update text overlay with the corresponding text
+            textOverlay.textContent = currentVideoText;
+
+            // Animate the text overlay's width back to 0
+            textTimeline.to(textOverlay, {
+                width: "100%",
+                duration: 4
+            });
+
+            // Load and play the video
+            videoElement.src = currentVideoUrl;
+            videoElement.load();
+            videoElement.play();
+
+            // Increment index and check for last video
+            currentVideoIndex++;
+
+            if (currentVideoIndex === videos.length) {
+                console.log("Last video played. Loop stopped.");
+            } else {
+                setTimeout(playNextVideo, 5000);
+            }
+        });
     }
 
-    videoElement.addEventListener('ended', loadNextVideo);
-    loadNextVideo();
+    playNextVideo();
 </script>
 
 </html>

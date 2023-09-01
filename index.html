@@ -157,7 +157,17 @@
 
       <div class="containerr">
         <div class="icon">
-          <div class="imgBx active" style="--i:1;">
+          <div class="imgBx active" style="--i:1;" data-id="content1">
+            <span class="span">
+              <a href="#">
+                Home
+              </a>
+              <span class="dot">
+
+              </span>
+            </span>
+          </div>
+          <div class="imgBx" style="--i:2;" data-id="content2">
             <span class="span">
               <a href="#">
                 Groups
@@ -167,7 +177,7 @@
               </span>
             </span>
           </div>
-          <div class="imgBx" style="--i:2;">
+          <div class="imgBx" style="--i:3;" data-id="content3">
             <span class="span">
               <a href="#">
                 Training Course
@@ -177,7 +187,7 @@
               </span>
             </span>
           </div>
-          <div class="imgBx" style="--i:3;">
+          <div class="imgBx" style="--i:4;" data-id="content4">
             <span class="span">
               <a href="#">
                 Coaching & Mentoring
@@ -187,7 +197,7 @@
               </span>
             </span>
           </div>
-          <div class="imgBx" style="--i:4;">
+          <div class="imgBx" style="--i:5;" data-id="content5">
             <span class="span">
               <a href="#">
                 Consulting
@@ -199,7 +209,7 @@
 
 
           </div>
-          <div class="imgBx" style="--i:5;">
+          <div class="imgBx" style="--i:6;" data-id="content6">
             <span class="span">
               <a href="#">
                 Practise & EAP
@@ -210,7 +220,7 @@
             </span>
 
           </div>
-          <div class="imgBx" style="--i:6;">
+          <div class="imgBx" style="--i:7;" data-id="content7">
             <span class="span">
               <a href="#">
                 About Us
@@ -221,7 +231,7 @@
             </span>
 
           </div>
-          <div class="imgBx" style="--i:7;">
+          <div class="imgBx" style="--i:8;" data-id="content8">
             <span class="span">
               <a href="#">
                 Contact Us
@@ -237,11 +247,53 @@
         </div> -->
         </div>
         <div class="content ">
-          <div class="contentBx">
+          <div class="contentBx active" id="content1">
             <h1>
               <a href="#" class="she" onclick="gotoSection1()">s</a><a href="#" class="he"
                 onclick="gotoSection2()">he</a><a class="me" href="#" onclick="gotoSection3()">me</a><a href="#"
                 class="we" onclick="gotoSection4()">we</a>
+            </h1>
+
+          </div>
+          <div class="contentBx" id="content2">
+            <h1>
+              Groups
+            </h1>
+
+          </div>
+          <div class="contentBx" id="content3">
+            <h1>
+              Training Course
+            </h1>
+
+          </div>
+          <div class="contentBx" id="content4">
+            <h1>
+              Coaching & Mentoring
+            </h1>
+
+          </div>
+          <div class="contentBx" id="content5">
+            <h1>
+              Consulting
+            </h1>
+
+          </div>
+          <div class="contentBx" id="content6">
+            <h1>
+              Practise & EAP
+            </h1>
+
+          </div>
+          <div class="contentBx" id="content7">
+            <h1>
+              About Us
+            </h1>
+
+          </div>
+          <div class="contentBx" id="content8">
+            <h1>
+              Contact Us
             </h1>
 
           </div>
@@ -258,7 +310,28 @@
   <div class="circle"></div>
   <div class="circle-follow"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js">
+  </script>
+  <script>
+    let imgBx = document.querySelectorAll(".imgBx");
+    let contentBx = document.querySelectorAll(".contentBx");
+
+    for (let i = 0; i < imgBx.length; i++) {
+      imgBx[i].addEventListener('mouseover', function () {
+        for (let i = 0; i < contentBx.length; i++) {
+          contentBx[i].className = 'contentBx';
+
+        }
+        document.getElementById(this.dataset.id).className = 'contentBx active';
+        for (let i = 0; i < imgBx.length; i++) {
+          imgBx[i].className = 'imgBx'
+
+        }
+        this.className = 'imgBx active';
+      })
+
+    }
+  </script>
 </body>
 
 </html>
