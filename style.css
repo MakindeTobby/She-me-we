@@ -559,7 +559,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    /* background-color: white; */
+    background-color: black;
+    border: 2px solid white;
+
     width: 420px;
     height: 420px;
     border-radius: 50%;
@@ -581,6 +584,7 @@ a {
     position: absolute;
     /* transform: scale(0); */
     background-color: black;
+    border: 1px solid white;
     border-radius: 50%;
     transition: 0.3s;
     display: flex;
