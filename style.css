@@ -497,7 +497,7 @@ a {
     /* border: 1px solid #fff; */
     /* box-shadow: 0 0 0 4px #000,
         0 0 0 6px #fff; */
-    transform: rotate(calc(360deg/8 * var(--i)));
+    transform: rotate(calc(360deg/7 * var(--i)));
     transform-origin: 320px;
     z-index: 100;
     /* animation: animate_01 360s linear infinite; */
@@ -526,7 +526,7 @@ a {
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
-    transform: rotate(calc(-360deg/8 * var(--i)));
+    transform: rotate(calc(-360deg/7 * var(--i)));
     transition: 0.5s;
     filter: grayscale(1);
     /* animation: animate_01 -360s linear infinite; */

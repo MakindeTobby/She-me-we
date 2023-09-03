@@ -161,12 +161,12 @@
 
       <div class="containerr">
         <div class="icon">
-          <div class="imgBx active" style="--i:1;" data-id="content1">
+          <div class="imgBx active" style="--i:1;" data-id="content1" hidden>
             <span class="span">
               <a href="#">
-                Home
+
               </a>
-              <span class="dot">
+              <span class="dot" hidden>
 
               </span>
             </span>
@@ -210,8 +210,6 @@
 
               </span>
             </span>
-
-
           </div>
           <div class="imgBx" style="--i:6;" data-id="content6">
             <span class="span">
@@ -222,6 +220,7 @@
 
               </span>
             </span>
+
 
           </div>
           <div class="imgBx" style="--i:7;" data-id="content7">
@@ -246,6 +245,7 @@
             </span>
 
           </div>
+
           <!-- <div class="imgBx" style="--i:8;">
           <span>Home</span>
         </div> -->
@@ -302,7 +302,6 @@
 
           </div>
 
-
         </div>
       </div>
     </div>
@@ -317,6 +316,53 @@
   <script src="script.js">
   </script>
   <script>
+    let imgBx = document.querySelectorAll(".imgBx");
+    let contentBx = document.querySelectorAll(".contentBx");
+    let test = document.getElementById("test")
+
+    // Add a 'mouseover' event listener to each imgBx element
+    imgBx.forEach((img, index) => {
+      img.addEventListener('mouseover', () => {
+        // Reset all contentBx and imgBx elements
+
+        // Add the 'active' class to the corresponding contentBx and imgBx elements
+        contentBx[index].classList.add('active');
+        img.classList.add('active');
+      });
+      img.addEventListener('mouseleave', () => {
+        // Reset all contentBx and imgBx elements
+
+        // Add the 'active' class to the corresponding contentBx and imgBx elements
+        contentBx[index].classList.remove('active');
+        img.classList.remove('active');
+      });
+
+
+    });
+
+    //     window.addEventListener("load", () => {
+    //       document.querySelector(".contentBx").innerHTML = `
+
+
+
+    // `
+    //     })
+
+
+
+
+    // function resetElements(contentElements, imgElements) {
+    //   contentElements.forEach(element => {
+    //     element.classList.remove('active');
+    //   });
+
+    //   imgElements.forEach(element => {
+    //     element.classList.remove('active');
+    //   });
+    // }
+  </script>
+
+  <!-- <script>
     let imgBx = document.querySelectorAll(".imgBx");
     let contentBx = document.querySelectorAll(".contentBx");
 
@@ -335,7 +381,7 @@
       })
 
     }
-  </script>
+  </script> -->
 </body>
 
 </html>
