@@ -674,3 +674,41 @@ a {
 .contentBx .card {
     position: relative;
 } */
+
+#content2,
+#content3,
+#content4,
+/* #content5, */
+#content6,
+#content7 {
+    background-image: url(./media/Groups.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #141414cb;
+}
+
+#content3 {
+    background-image: url(./media/training.jpg);
+}
+
+#content4 {
+    background-image: url(./media/coaching\ and\ mentoring.jpg);
+}
+
+#content5 {
+    background-image: url(./media/);
+}
+
+#content6 {
+    background-image: url(./media/practice\ and\ eap.jpg);
+}
+
+#content7 {
+    background-image: url(./media/about\ us.jpg);
+}
+
+#content8 {
+    background-image: url(./media/.jpg);
+}
