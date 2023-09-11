@@ -1,0 +1,15 @@
+{
+  "name": "shemewe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "npm run test",
+    "build-css": "node-sass style.scss -o dist"
+  },
+  "author": "shemewe",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
