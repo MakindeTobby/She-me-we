@@ -10,22 +10,44 @@
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"> -->
-  <title>Shemewe</title>
+  <title>shemewe</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar">
       <span></span>
-      <a href="index.html" class="logo">Shemewe</a>
+      <a href="index.html" class="logo">shemewé</a>
 
     </nav>
   </header>
 
 
-
+  <div class="circle"></div>
+  <div class="circle-follow"></div>
   <div class="dark-background">
-    <div class="loading-spinner"></div>
+    <!-- <div className="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div> -->
+    <div class="loading-spinner">
+
+
+    </div>
+    <!-- <p>
+      I acknowledge the First Nations People and Custodians of the lands, skies and waterways of Australia on which I
+      work and live. I celebrate the rich and continuing cultures, deep wisdom, diverse arts, healing practices and
+      resilient communities of First Nations Peoples. My gratitude to the Ancestors and Elders of First Nations People,
+      holders of the knowledge, have and continue to lead the way for us all. It always was and always will be,
+      Aboriginal land.
+    </p> -->
   </div>
   <audio id="background-audio" loop>
     <source src="./media/shemewe.mpeg" type="audio/mpeg">
@@ -173,77 +195,77 @@
             </span>
           </div>
           <div class="imgBx" style="--i:2;" data-id="content2">
-            <span class="span">
-              <a href="#popup">
+            <span>
+              <a href="#popup" class="span">
                 Groups
-              </a>
-              <span class="dot">
+                <span class="dot">
 
-              </span>
+                </span>
+              </a>
             </span>
           </div>
           <div class="imgBx" style="--i:3;" data-id="content3">
-            <span class="span">
-              <a href="https://drive.google.com/file/d/1Vs66SzO_owuWYwaWJ_kx4olKcFRR0oIP/view?usp=drive_link">
+            <span>
+              <a href="#popup2" class="span">
                 Training Course
-              </a>
-              <span class="dot">
+                <span class="dot">
 
-              </span>
+                </span>
+              </a>
             </span>
           </div>
           <div class="imgBx" style="--i:4;" data-id="content4">
-            <span class="span">
+            <span>
               <a href="https://drive.google.com/file/d/1r59djRoue9NtO39f8nxKG-_7e24KL1_N/view?usp=drive_link"
-                target="_blank">
+                target="_blank" class="span">
                 Coaching & Mentoring
-              </a>
-              <span class="dot">
+                <span class="dot">
 
-              </span>
+                </span>
+              </a>
             </span>
           </div>
           <div class="imgBx" style="--i:5;" data-id="content5">
-            <span class="span">
-              <a href="#">
+            <span>
+              <a href="#" class="span">
                 Consulting
-              </a>
-              <span class="dot">
+                <span class="dot">
 
-              </span>
+                </span>
+              </a>
             </span>
           </div>
           <div class="imgBx" style="--i:6;" data-id="content6">
-            <span class="span">
-              <a href="#">
+            <span>
+              <a href="#" class="span">
                 Practise & EAP
-              </a>
-              <span class="dot">
+                <span class="dot">
 
-              </span>
+                </span>
+              </a>
             </span>
 
 
           </div>
           <div class="imgBx" style="--i:7;" data-id="content7">
-            <span class="span">
-              <a href="#">
+            <span>
+              <a href="#" class="span">
                 About Us
-              </a>
-              <span class="dot">
+                <span class="dot">
 
-              </span>
+                </span>
+              </a>
             </span>
 
           </div>
           <div class="imgBx" style="--i:8;" data-id="content8">
-            <span class="span">
-              <a href="#">
+            <span>
+              <a href="#popup8" class="span">
                 Contact Us
-              </a>
-              <span class="dot">
+                <span class="dot">
 
-              </span>
+                </span>
+              </a>
             </span>
 
           </div>
@@ -254,11 +276,11 @@
         </div>
         <div class="content ">
           <div class="contentBx active" id="content1">
-            <h1>
+            <h2>
               <a href="#" class="she" onclick="gotoSection1()">s</a><a href="#" class="he"
                 onclick="gotoSection2()">he</a><a class="me" href="#" onclick="gotoSection3()">me</a><a href="#"
-                class="we" onclick="gotoSection4()">we</a>
-            </h1>
+                class="we" onclick="gotoSection4()">wé</a>
+            </h2>
 
           </div>
           <div class="contentBx" id="content2">
@@ -312,21 +334,101 @@
   <!-- Modal -->
 
   <div class="popup" id="popup">
-    <div class="popup-inner">
-      <!-- <div class="popup__photo">
-        <img
-          src="https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?ixlib=rb-0.3.5&s=9980646201037d28700d826b1bd096c4&auto=format&fit=crop&w=700&q=80"
-          alt="">
+    <div class="popup-inner" style="display: flex; flex-direction: column;">
+
+      <div class="popup__text">
+        <iframe src="./media/1000_GroupsProspectus_FA (web).pdf" frameborder="0"></iframe>
+      </div>
+      <!-- <div class="popup__text">
+        <iframe src="./media/1002_Shemewe_Training Course Outline_FA (web).pdf" frameborder="0"></iframe>
       </div> -->
+      <a class="popup__close" href="#">X</a>
+      <a class="popup__download"
+        href="https://drive.google.com/file/d/1r59djRoue9NtO39f8nxKG-_7e24KL1_N/view?usp=drive_link"><i
+          class="fa fa-window-maximize" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="popup" id="popup2">
+    <div class="popup-inner" style="display: flex; flex-direction: column;">
+
       <div class="popup__text">
         <iframe src="./media/1002_Shemewe_Training Course Outline_FA (web).pdf" frameborder="0"></iframe>
       </div>
+      <!-- <iframe src="./media/1002_Shemewe_Training Course Outline_FA (web).pdf" frameborder="0"></iframe> -->
+
+      <a class="popup__close" href="#">X</a>
+      <a class="popup__download"
+        href="https://drive.google.com/file/d/1Vs66SzO_owuWYwaWJ_kx4olKcFRR0oIP/view?usp=sharing"><i
+          class="fa fa-window-maximize" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="popup" id="popup8">
+    <div class="popup-inner" style="display: flex; flex-direction: column;">
+
+
+      <div class="popup__text">
+        <div class="formbold-form-wrapper">
+          <form action="https://formbold.com/s/FORM_ID" method="POST">
+            <div class="formbold-input-flex">
+              <div>
+                <label for="firstname" class="formbold-form-label"> First Name </label>
+                <input required type="text" name="firstname" id="firstname" placeholder="Jane"
+                  class="formbold-form-input" />
+              </div>
+              <div>
+                <label for="lastname" class="formbold-form-label"> Family Name </label>
+                <input required type="text" name="lastname" id="lastname" placeholder="Cooper"
+                  class="formbold-form-input" />
+              </div>
+            </div>
+
+
+            <div class="formbold-input-flex">
+              <div>
+                <label for="email" class="formbold-form-label"> Email</label>
+                <input required type="email" name="email" id="email" placeholder="jhon@mail.com"
+                  class="formbold-form-input" />
+              </div>
+              <div>
+                <label for="phone" class="formbold-form-label"> Mobile </label>
+                <input required type="text" name="phone" id="phone" placeholder="(319) 555-0115"
+                  class="formbold-form-input" />
+              </div>
+            </div>
+            <div class="formbold">
+              <div>
+                <label for="email" class="formbold-form-label"> Organisation</label>
+                <input required type="email" name="email" id="email" placeholder="XYZ Corporation"
+                  class="formbold-form-input" />
+              </div>
+
+            </div>
+
+
+
+            <div>
+              <label for="message" class="formbold-form-label"> Message </label>
+              <textarea rows="6" name="message" id="message" placeholder="Type your message"
+                class="formbold-form-input"></textarea>
+            </div>
+
+            <button class="formbold-btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- <div class="popup__text">
+        <iframe src="./media/1002_Shemewe_Training Course Outline_FA (web).pdf" frameborder="0"></iframe>
+      </div> -->
       <a class="popup__close" href="#">X</a>
     </div>
   </div>
 
-  <div class="circle"></div>
-  <div class="circle-follow"></div>
+
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
   <script src="script.js">
   </script>
@@ -354,49 +456,9 @@
 
 
     });
-
-    //     window.addEventListener("load", () => {
-    //       document.querySelector(".contentBx").innerHTML = `
-
-
-
-    // `
-    //     })
-
-
-
-
-    // function resetElements(contentElements, imgElements) {
-    //   contentElements.forEach(element => {
-    //     element.classList.remove('active');
-    //   });
-
-    //   imgElements.forEach(element => {
-    //     element.classList.remove('active');
-    //   });
-    // }
   </script>
 
-  <!-- <script>
-    let imgBx = document.querySelectorAll(".imgBx");
-    let contentBx = document.querySelectorAll(".contentBx");
 
-    for (let i = 0; i < imgBx.length; i++) {
-      imgBx[i].addEventListener('mouseover', function () {
-        for (let i = 0; i < contentBx.length; i++) {
-          contentBx[i].className = 'contentBx';
-
-        }
-        document.getElementById(this.dataset.id).className = 'contentBx active';
-        for (let i = 0; i < imgBx.length; i++) {
-          imgBx[i].className = 'imgBx'
-
-        }
-        this.className = 'imgBx active';
-      })
-
-    }
-  </script> -->
 </body>
 
 </html>

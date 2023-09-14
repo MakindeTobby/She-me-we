@@ -20,9 +20,8 @@ function playAudioAndStop() {
 playButton.addEventListener('click', playAudioAndStop);
 
 
-mainTimeline
-    .addLabel('start')
-    .fromTo('.loading-spinner', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 360, duration: 2 })
+mainTimeline.addLabel('start')
+    .fromTo('.loading-spinner', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 2 })
     .to('.page1', { opacity: 1, duration: 1 })
     .to('.page1', { opacity: 0, duration: 1, delay: 5 })
     .add(() => {
@@ -102,14 +101,14 @@ function gotoSection1() {
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
     gsap.set('.page4', { display: 'none' });
-    gsap.set('.page2', { display: 'block' });
+    gsap.set('.page2', { display: 'block', opacity: 1 });
     gsap.set('.page1', { display: 'none' });
     gsap.set('.loading-spinner', { display: 'none' });
 }
 function gotoSection2() {
     gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
-    gsap.set('.page3', { display: 'block' });
+    gsap.set('.page3', { display: 'block', opacity: 1 });
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
@@ -119,33 +118,58 @@ function gotoSection3() {
     gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
-    gsap.set('.page4', { display: 'block' });
+    gsap.set('.page4', { display: 'block', opacity: 1 });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
     gsap.set('.loading-spinner', { display: 'none' });
 }
 function gotoSection4() {
     gsap.set('.page6', { display: 'none' });
-    gsap.set('.page5', { display: 'block' });
+    gsap.set('.page5', { display: 'block', opacity: 1 });
     gsap.set('.page3', { display: 'none' });
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
     gsap.set('.loading-spinner', { display: 'none' });
+
+
 }
+
+// function gotoSection() {
+//     // Pause the main timeline
+//     mainTimeline.pause();
+
+//     // Hide and show the desired sections
+//     const sectionsToShow = ['.page4'];
+//     const sectionsToHide = ['.page5', '.page3', '.page6', '.page2', '.page1', '.loading-spinner'];
+
+//     gsap.set(sectionsToShow, { display: 'block' });
+//     gsap.set(sectionsToHide, { display: 'none' });
+//     document.querySelector('.page4').classList.remove('hidden');
+// }
+
+
 function gotoSection() {
-    mainTimeline.pause();
-    gsap.set('.page6', { display: 'block' });
+    // mainTimeline.pause();
+    gsap.set('.page6', { display: 'block', opacity: 1 });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
     gsap.set('.loading-spinner', { display: 'none' });
+    mainTimeline.pause();
 }
 
+// ... (Your animation timeline code)
 
+// Function to handle the skip button click
+function handleSkipButtonClick() {
+    mainTimeline.pause(); // Pause the main timeline
+}
 
+// Add a click event listener to the skip button
+document.getElementById('skipButton').addEventListener('click', handleSkipButtonClick);
 
 
 
