@@ -21,14 +21,14 @@ playButton.addEventListener('click', playAudioAndStop);
 
 
 mainTimeline.addLabel('start')
-    .fromTo('.loading-spinner', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 2 })
+    .fromTo('.loading-text', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 4 })
     .to('.page1', { opacity: 1, duration: 1 })
     .to('.page1', { opacity: 0, duration: 1, delay: 5 })
     .add(() => {
 
         // Remove 'hidden' class and animate opacity to reveal page 2
         document.querySelector('.page2').classList.remove('hidden');
-        gsap.to('.page2', { opacity: 1, duration: 1 });
+        gsap.to('.page2', { opacity: 1, duration: 2 });
 
 
     })
@@ -48,7 +48,7 @@ mainTimeline.addLabel('start')
     .add(() => {
         // Remove 'hidden' class and animate opacity to reveal page 4
         document.querySelector('.page5').classList.remove('hidden');
-        gsap.to('.page5', { opacity: 1, duration: 1 });
+        gsap.to('.page5', { opacity: 1, duration: 2 });
     })
     .to('.page5', { opacity: 0, duration: 1, delay: 5 })
     .add(() => {
@@ -64,7 +64,7 @@ mainTimeline.addLabel('start')
         gsap.set('.page2', { display: 'none' });
         gsap.set('.page1', { display: 'none' });
         gsap.set('.page6', { display: 'block' });
-        gsap.set('.loading-spinner', { display: 'none' });
+        gsap.set('.loading-text', { display: 'none' });
 
 
         mainTimeline.seek('start'); // Go back to the 'start' label after the last page animation
@@ -103,7 +103,7 @@ function gotoSection1() {
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'block', opacity: 1 });
     gsap.set('.page1', { display: 'none' });
-    gsap.set('.loading-spinner', { display: 'none' });
+    gsap.set('.loading-text', { display: 'none' });
 }
 function gotoSection2() {
     gsap.set('.page6', { display: 'none' });
@@ -112,7 +112,7 @@ function gotoSection2() {
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
-    gsap.set('.loading-spinner', { display: 'none' });
+    gsap.set('.loading-text', { display: 'none' });
 }
 function gotoSection3() {
     gsap.set('.page6', { display: 'none' });
@@ -121,7 +121,7 @@ function gotoSection3() {
     gsap.set('.page4', { display: 'block', opacity: 1 });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
-    gsap.set('.loading-spinner', { display: 'none' });
+    gsap.set('.loading-text', { display: 'none' });
 }
 function gotoSection4() {
     gsap.set('.page6', { display: 'none' });
@@ -130,7 +130,7 @@ function gotoSection4() {
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
-    gsap.set('.loading-spinner', { display: 'none' });
+    gsap.set('.loading-text', { display: 'none' });
 
 
 }
@@ -141,7 +141,7 @@ function gotoSection4() {
 
 //     // Hide and show the desired sections
 //     const sectionsToShow = ['.page4'];
-//     const sectionsToHide = ['.page5', '.page3', '.page6', '.page2', '.page1', '.loading-spinner'];
+//     const sectionsToHide = ['.page5', '.page3', '.page6', '.page2', '.page1', '.loading-text'];
 
 //     gsap.set(sectionsToShow, { display: 'block' });
 //     gsap.set(sectionsToHide, { display: 'none' });
@@ -157,7 +157,7 @@ function gotoSection() {
     gsap.set('.page4', { display: 'none' });
     gsap.set('.page2', { display: 'none' });
     gsap.set('.page1', { display: 'none' });
-    gsap.set('.loading-spinner', { display: 'none' });
+    gsap.set('.loading-text', { display: 'none' });
     mainTimeline.pause();
 }
 
