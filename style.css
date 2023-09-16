@@ -28,7 +28,7 @@
 
 body {
     color: #fff;
-    font-family: 'b', cursive;
+    font-family: 'b';
     overflow: hidden;
     background-color: #141414;
     height: 100vh;
@@ -455,9 +455,9 @@ a {
     /* font-weight: bold; */
     /* line-height: 1.2; */
     /* color: transparent; */
-    /* font-family: 'Awake the Beauty', cursive; */
+    /* font-family: 'Awake the Beauty'; */
     /* -webkit-text-stroke: 1px #fff; */
-    opacity: .8;
+    /* opacity: .8; */
     transition: color .3s ease-in-out;
 }
 
@@ -736,14 +736,14 @@ iframe {
 
 
 .contentBx h1 {
-    font-family: b, cursive;
+    font-family: b;
     font-size: 6rem;
     opacity: .8;
     transition: color .3s ease-in-out;
 }
 
 .contentBx h2 {
-    font-family: b, cursive;
+    font-family: b;
     font-size: 8.5rem;
     opacity: .8;
     transition: color .3s ease-in-out;
@@ -855,15 +855,13 @@ iframe {
 }
 
 #content3 {
-    background-image: url(./media/training.jpg);
-    background-size: contain;
-    background-position: center;
+    background-image: url(./media/Training\ Course.jpg);
+
 }
 
 #content4 {
     background-image: url(./media/coaching\ and\ mentoring.jpg);
-    background-size: contain;
-    background-position: center;
+
 }
 
 #content5 {
