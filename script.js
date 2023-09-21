@@ -135,18 +135,7 @@ function gotoSection4() {
 
 }
 
-// function gotoSection() {
-//     // Pause the main timeline
-//     mainTimeline.pause();
 
-//     // Hide and show the desired sections
-//     const sectionsToShow = ['.page4'];
-//     const sectionsToHide = ['.page5', '.page3', '.page6', '.page2', '.page1', '.loading-text'];
-
-//     gsap.set(sectionsToShow, { display: 'block' });
-//     gsap.set(sectionsToHide, { display: 'none' });
-//     document.querySelector('.page4').classList.remove('hidden');
-// }
 
 
 function gotoSection() {
