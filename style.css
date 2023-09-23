@@ -31,7 +31,7 @@ body {
     font-family: 'b';
     overflow: hidden;
     background-color: #141414;
-    height: 100vh;
+    /* height: 100vh; */
     /* background-image: url(./media/sky.gif); */
     /* background-repeat: no-repeat; */
     background-size: cover;
@@ -701,6 +701,7 @@ iframe {
     /* background-color: white; */
     background-color: black;
     border: 2px solid white;
+
     /* animation: animate 5s infinite linear; */
 
     width: 420px;
@@ -708,8 +709,21 @@ iframe {
     border-radius: 50%;
     left: 9%;
     top: 12%;
+    /* animation-name: rotate; */
+    /* animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .contentBx h1 {
     font-family: b;
