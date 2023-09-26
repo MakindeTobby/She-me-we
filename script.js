@@ -1,4 +1,4 @@
-const mainTimeline = gsap.timeline({ repeat: -1, });
+const mainTimeline = gsap.timeline({ repeat: -1 });
 
 // Play the audio when the timeline starts
 const audio = document.getElementById('background-audio');

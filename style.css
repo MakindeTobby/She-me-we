@@ -273,7 +273,8 @@ body {
 }
 
 .loading-text {
-    width: 500px;
+    /* border: 1px solid red; */
+    max-width: 500px;
     height: 500px;
     position: absolute;
     text-align: center;
@@ -281,7 +282,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10000;
+    /* z-index: 10000; */
     padding: auto;
 }
 
