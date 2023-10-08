@@ -21,7 +21,7 @@ playButton.addEventListener('click', playAudioAndStop);
 
 
 mainTimeline.addLabel('start')
-    .fromTo('.loading-text', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 4 })
+    .fromTo('.loading-text', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 20 })
     .to('.page1', { opacity: 1, duration: 1 })
     .to('.page1', { opacity: 0, duration: 1, delay: 5 })
     .add(() => {
@@ -164,45 +164,4 @@ document.getElementById('skipButton').addEventListener('click', handleSkipButton
 
 
 
-let circle = document.querySelector('.circle');
-let follow = document.querySelector('.circle-follow');
-let links = document.querySelectorAll('a');
-
-function moveCircle(e) {
-    gsap.to(circle, { duration: 0.3, x: e.clientX, y: e.clientY });
-    gsap.to(follow, { duration: 0.7, x: e.clientX, y: e.clientY });
-}
-
-function hoverFunc() {
-    gsap.to(circle, { duration: 0.3, opacity: 1, scale: 0 });
-    gsap.to(follow, { duration: 0.3, scale: 3 });
-}
-
-function unhoverFunc() {
-    gsap.to(circle, { duration: 0.3, opacity: 1, scale: 1 });
-    gsap.to(follow, { duration: 0.3, scale: 1 });
-}
-
-window.addEventListener('mousemove', moveCircle);
-
-links.forEach(function (link) {
-    link.addEventListener('mouseenter', hoverFunc);
-    link.addEventListener('mouseleave', unhoverFunc);
-});
-
-
-// Get the elements for "s" and "he"
-const sElement = document.querySelector('.she');
-const heElement = document.querySelector('.he');
-
-// Add hover event listener to "s" element
-sElement.addEventListener('mouseover', () => {
-    // Add the color-change class to "he" element
-    heElement.classList.add('color-change');
-});
-
-sElement.addEventListener('mouseout', () => {
-    // Remove the color-change class from "he" element
-    heElement.classList.remove('color-change');
-});
 

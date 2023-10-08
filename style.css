@@ -54,7 +54,7 @@ body {
     border-radius: 4px;
 }
 
-/* Firefox
+/* FirefoxEAP
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1; */
 
@@ -305,7 +305,7 @@ body {
 }
 
 .img-container6 {
-    background-image: url(./media/sky.gif);
+    background-image: url(./media/bg-trim.gif);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -708,7 +708,7 @@ iframe {
     width: 420px;
     height: 420px;
     border-radius: 50%;
-    left: 9%;
+    left: 10%;
     top: 12%;
     /* animation-name: rotate; */
     /* animation-duration: 5s;
@@ -834,15 +834,16 @@ iframe {
 #content2,
 #content3,
 #content4,
-/* #content5, */
+#content5,
 #content6,
-#content7 {
+#content7,
+#content8 {
     background-image: url(./media/gjx.jpg);
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-color: #141414be;
+    background-color: #1414147a;
 }
 
 #content3 {
@@ -856,7 +857,7 @@ iframe {
 }
 
 #content5 {
-    background-image: url(./media/);
+    background-image: url(./media/shemewe\ culture.jpg);
 }
 
 #content6 {
@@ -868,7 +869,7 @@ iframe {
 }
 
 #content8 {
-    background-image: url(./media/.jpg);
+    background-image: url(./media/shemewe\ about\ image.jpg);
 }
 
 
