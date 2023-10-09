@@ -10,6 +10,7 @@
     font-family: w;
     src: url(./fonts/WanoQuin-ExtraBold.otf);
 } */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 @font-face {
     font-family: y;
@@ -279,7 +280,7 @@ body {
     position: absolute;
     text-align: center;
     top: 80%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     left: 50%;
     transform: translate(-50%, -50%);
     /* z-index: 10000; */
@@ -293,7 +294,7 @@ body {
 
 .dark-background p {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Rubik', sans-serif;
 } */
 
 .img-container,
@@ -658,13 +659,13 @@ iframe {
     color: white;
     text-align: center;
     font-size: 1.1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     transform: rotate(calc(-360deg/7 * var(--i)));
     transition: 0.5s;
     filter: grayscale(1);
     cursor: pointer;
     /* animation: animate_01 -360s linear infinite; */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -756,6 +757,10 @@ iframe {
     transform: scale(0);
     /* opacity: 0; */
     /* translate: 0; */
+    -webkit-box-shadow: 0px 0px 46px 2px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: 0px 0px 46px 2px rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 46px 2px rgba(255, 255, 255, 0.7);
+
 }
 
 .contentBx.active {
@@ -1015,7 +1020,7 @@ iframe {
         border-radius: 15px;
         background-color: rgba(255, 255, 255, 0.09);
         border: 1px solid rgba(255, 255, 255, 0.09);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Rubik', sans-serif;
         backdrop-filter: blur(30px);
         color: rgba(255, 255, 255, 0.8);
         /* font-size: 14px; */
