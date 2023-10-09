@@ -746,7 +746,12 @@ iframe {
     height: 420px;
     position: absolute;
     /* transform: scale(0); */
-    background-color: black;
+    background-image: url(./media/mini-bg.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #1414147a;
     /* border: 1px solid white; */
     border-radius: 50%;
     transition: 0.3s;
