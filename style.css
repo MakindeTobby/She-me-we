@@ -633,7 +633,7 @@ iframe {
     /* border: 1px solid #fff; */
     /* box-shadow: 0 0 0 4px #000,
         0 0 0 6px #fff; */
-    transform: rotate(calc(360deg/7 * var(--i)));
+    transform: rotate(calc(360deg/6 * var(--i)));
     transform-origin: 360px;
     /* z-index: ; */
     /* animation: animate_01 360s linear infinite; */
@@ -663,7 +663,7 @@ iframe {
     text-align: center;
     /* font-size: 1.1rem; */
     /* font-weight: bold; */
-    transform: rotate(calc(-360deg/7 * var(--i)));
+    transform: rotate(calc(-360deg/6 * var(--i)));
     transition: 0.5s;
     filter: grayscale(1);
     cursor: pointer;
@@ -859,7 +859,7 @@ iframe {
     background-color: #1414147a;
 }
 
-#content3 {
+#content2 {
     background-image: url(./media/Training\ Course.jpg);
 
 }
@@ -869,19 +869,19 @@ iframe {
 
 }
 
-#content5 {
+#content3 {
     background-image: url(./media/shemewe\ culture.jpg);
 }
 
-#content6 {
+#content7 {
     background-image: url(./media/practice\ and\ eap.jpg);
 }
 
-#content7 {
+#content6 {
     background-image: url(./media/about.jpg);
 }
 
-#content8 {
+#content5 {
     background-image: url(./media/shemewe\ about\ image.jpg);
 }
 
