@@ -28,9 +28,9 @@ mainTimeline.addLabel('start')
 
         // Remove 'hidden' class and animate opacity to reveal page 2
         document.querySelector('.page2').classList.remove('hidden');
-        gsap.to('.page2', { x: 0, duration: 2, ease: "bounce.out" });
+        // gsap.to('.page2', { x: 0, duration: 2, ease: "bounce.out" });
 
-        // gsap.to('.page2', { opacity: 1, duration: 2 });
+        gsap.to('.page2', { opacity: 1, duration: 2 });
 
 
     })
@@ -46,7 +46,7 @@ mainTimeline.addLabel('start')
         document.querySelector('.page4').classList.remove('hidden');
         gsap.to('.page4', { opacity: 1, duration: 1 });
     })
-    .to('.page4', { opacity: 0, duration: 1, delay: 7 })
+    .to('.page4', { opacity: 0, duration: 1, delay: 10 })
     .add(() => {
         // Remove 'hidden' class and animate opacity to reveal page 4
         document.querySelector('.page5').classList.remove('hidden');
