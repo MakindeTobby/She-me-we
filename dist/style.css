@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
 @media screen and (max-width: 768px) {
 
   html,
@@ -26,7 +28,7 @@
   /* transition: opacity 1s ease 0s; */
   /* transition: opacity 250ms 500ms ease, transform 350ms 500ms ease; */
   scale: 1;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .popup-inner {
@@ -42,8 +44,12 @@
   width: 60%;
   height: 80%;
   background-color: #fff;
-  transform: rotate(20deg);
-  transition: .4s ease-in-out;
+  transform: scale(1);
+  /* opacity: 1; */
+  transition-delay: 0.2s;
+  /* translate: 99; */
+  /* transform: rotate(20deg);
+  transition: .4s ease-in-out; */
 }
 
 .popup__photo {
