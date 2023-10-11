@@ -7,21 +7,21 @@ document.querySelector('.page1').classList.remove('hidden');
 const playButton = document.querySelector('.play-btn');
 
 
-const audioDuration = 1800; // 5000 milliseconds (5 seconds)
+// const audioDuration = 1800; // 5000 milliseconds (5 seconds)
 
-function playAudioAndStop() {
-    audio.play();
-    setTimeout(() => {
-        audio.pause();
-        audio.currentTime = 0; // Reset audio to the beginning
-    }, audioDuration);
-}
+// function playAudioAndStop() {
+//     audio.play();
+//     setTimeout(() => {
+//         audio.pause();
+//         audio.currentTime = 0; // Reset audio to the beginning
+//     }, audioDuration);
+// }
 
-playButton.addEventListener('click', playAudioAndStop);
+// playButton.addEventListener('click', playAudioAndStop);
 
 
 mainTimeline.addLabel('start')
-    .fromTo('.loading-text', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 20 })
+    .fromTo('.loading-text', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 8 })
     .to('.page1', { opacity: 1, duration: 1 })
     .to('.page1', { opacity: 0, duration: 1, delay: 5 })
     .add(() => {
