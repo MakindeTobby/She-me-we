@@ -68,7 +68,7 @@
   </div>
   <div class="page page2 hidden" id="section1">
     <div class="img-container">
-      <video autoplay loop muted class="img">
+      <video autoplay loop muted class="img" id="sheVideo">
         <source src="./media/water.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -114,7 +114,7 @@
   </div>
   <div class="page page4 hidden" id="section3">
     <div class="img-container">
-      <video autoplay loop muted class="img">
+      <video autoplay loop muted class="img" id="meVideo">
         <source src="./media/Sunset to Sunrise Time Lapse.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -138,7 +138,7 @@
 
   <div class="page page5 hidden" id="section4">
     <div class="img-container">
-      <video autoplay muted class="img">
+      <video autoplay muted class="img" id="weVideo">
         <source src="./media/Amazing Dolphins Surfing Waves.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -279,8 +279,8 @@
           <div class="contentBx active" id="content1" style="display: flex; flex-direction: column;">
             <h2>
               <a href="#" class="she" onclick="gotoSection1()">s</a><a href="#" class="he"
-                onclick="gotoSection2()">he</a><a class="me" href="#" onclick="gotoSection3()">me</a><a href="#"
-                class="we" onclick="gotoSection4()">wé</a>
+                onclick="gotoSection2()">he</a><a class="me" href="#" onclick="gotoSection3('meVideo')">me</a><a
+                href="#" class="we" onclick="gotoSection4('weVideo')">wé</a>
             </h2>
 
             <!-- <button class="play-btn"><i class="fas fa-volume-up"></i></button> -->

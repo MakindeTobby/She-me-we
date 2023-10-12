@@ -98,7 +98,15 @@ gsap.from('.s', {
 });
 
 
-function gotoSection1() {
+function restartVideo(id) {
+    const video = document.getElementById(id);
+    // Set the currentTime of the video to 0 to replay from the beginning
+    video.currentTime = 0;
+    // Play the video
+    video.play();
+}
+function gotoSection1(id) {
+    restartVideo(id)
     gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
@@ -116,7 +124,8 @@ function gotoSection2() {
     gsap.set('.page1', { display: 'none' });
     gsap.set('.loading-text', { display: 'none' });
 }
-function gotoSection3() {
+function gotoSection3(id) {
+    restartVideo(id)
     gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
@@ -125,7 +134,8 @@ function gotoSection3() {
     gsap.set('.page1', { display: 'none' });
     gsap.set('.loading-text', { display: 'none' });
 }
-function gotoSection4() {
+function gotoSection4(id) {
+    restartVideo(id)
     gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'block', opacity: 1 });
     gsap.set('.page3', { display: 'none' });
