@@ -651,7 +651,7 @@ iframe {
     /* border: 1px solid #fff; */
     /* box-shadow: 0 0 0 4px #000,
         0 0 0 6px #fff; */
-    transform: rotate(calc(360deg/6 * var(--i)));
+    transform: rotate(calc(366deg/6 * var(--i)));
     transform-origin: 360px;
     /* z-index: ; */
     /* animation: animate_01 360s linear infinite; */
@@ -681,7 +681,7 @@ iframe {
     text-align: center;
     /* font-size: 1.1rem; */
     /* font-weight: bold; */
-    transform: rotate(calc(-360deg/6 * var(--i)));
+    transform: rotate(calc(-366deg/6 * var(--i)));
     transition: 0.5s;
     filter: grayscale(1);
     cursor: pointer;
@@ -931,7 +931,7 @@ iframe {
 }
 
 .formbold-input-flex>div {
-    width: 50%;
+    width: 100%;
 }
 
 
@@ -944,7 +944,7 @@ iframe {
     background: transparent;
     font-weight: 500;
     font-size: 16px;
-    color: #d1d5db;
+    color: #141414;
     outline: none;
     resize: none;
 }
@@ -959,7 +959,7 @@ iframe {
 }
 
 .formbold-form-label {
-    color: #d1d5db;
+    color: #141414;
     font-size: 14px;
     line-height: 24px;
     display: block;
@@ -968,7 +968,7 @@ iframe {
 
 .formbold-btn {
     text-align: center;
-    width: 100%;
+    width: 50%;
     font-size: 16px;
     border-radius: 5px;
     padding: 14px 25px;

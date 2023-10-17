@@ -160,16 +160,19 @@ function gotoSection() {
     gsap.set('.loading-text', { display: 'none' });
     mainTimeline.pause();
 }
-
-// ... (Your animation timeline code)
-
-// Function to handle the skip button click
-function handleSkipButtonClick() {
-    mainTimeline.pause(); // Pause the main timeline
+function gotoSect() {
+    console.log('hello');
 }
 
-// Add a click event listener to the skip button
-document.getElementById('skipButton').addEventListener('click', handleSkipButtonClick);
+// // ... (Your animation timeline code)
+
+// // Function to handle the skip button click
+// function handleSkipButtonClick() {
+//     mainTimeline.pause(); // Pause the main timeline
+// }
+
+// // Add a click event listener to the skip button
+// document.getElementById('skipButton').addEventListener('click', handleSkipButtonClick);
 
 
 
