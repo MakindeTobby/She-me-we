@@ -27,13 +27,19 @@
   <div class="circle-follow"></div>
   <div class="dark-background">
 
-    <p class="loading-text">
-      We acknowledge First Nations People as the Original People and Custodians of the Lands, Skies and Waterways of
-      Australia. We pay our respects to the Elders of the past, present and those still emerging. We stand by First
-      Nations people as they move forward, hopeful that one day their descendants and ours, can live in a country where
-      their rich cultures are the strong foundation of Australia’s national identity.
+    <div class="loading-text">
+      <div class="mini-side" onclick="gotoSection()">
+        <a href="#"> <i class="fa-solid fa-house"></i></a>
+      </div>
+      <p>
+        We acknowledge First Nations People as the Original People and Custodians of the Lands, Skies and Waterways of
+        Australia. We pay our respects to the Elders of the past, present and those still emerging. We stand by First
+        Nations people as they move forward, hopeful that one day their descendants and ours, can live in a country
+        where
+        their rich cultures are the strong foundation of Australia’s national identity.
 
-    </p>
+      </p>
+    </div>
   </div>
   <audio id="background-audio" loop>
     <source src="./media/shemewe.mpeg" type="audio/mpeg">
@@ -41,7 +47,11 @@
   </audio>
   <div class="page page1 hidden">
     <div class="img-container">
-      <img src="./media/bg-trim.gif" alt="GIF" class="img">
+      <video autoplay loop muted class="img" id="sheVideo">
+        <source src="./media/trim.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- <img src="./media/bg-trim.gif" alt="GIF" class="img"> -->
       <div class="text-content">
 
 
@@ -63,6 +73,9 @@
 
         <p class="txt-bottom">
         </p>
+      </div>
+      <div class="right-side" onclick="gotoSection()">
+        <a href="#"><i class="fa-solid fa-house"></i></a>
       </div>
     </div>
   </div>
@@ -107,7 +120,7 @@
           </div>
         </div>
         <div class="right-side" onclick="gotoSection()">
-          <a href="#"><i class="fa-solid fa-house"></i></a>
+          <span><i class="fa-solid fa-house"></i></span>
         </div>
       </div>
     </div>
@@ -221,7 +234,6 @@
               <a href="#popup5" class="span">
                 Contact Us
                 <span class="dot">
-
                 </span>
               </a>
             </span>
@@ -326,7 +338,7 @@
           </div>
           <div class="contentBx" id="content8">
             <h1>
-
+              Contact us
             </h1>
 
           </div>
@@ -378,12 +390,12 @@
           <br>
 
           <a href="https://drive.google.com/file/d/1ha5X0FbN67s3zX3AY_6LHMP3_HIajePR/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;"> Click here</a> For the Prospectus
+            target="_blank" style="font-weight: bold; color: red;"> For the Prospectus</a>
           <br>
           <br>
 
           <a href="https://drive.google.com/file/d/1jYiEQmsPA5jIVPf1vcRiqoGz29GsmeA1/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: black;"> Click here</a> For the Costings.
+            target="_blank" style="font-weight: bold; color: red;"> For the Costings.</a>
         </p>
 
       </div>
@@ -407,16 +419,16 @@
 
           <a href="https://drive.google.com/file/d/1_xsuF-ZiIs2t-BtCQNtsI1kqCZtFIo5d/view?usp=drive_link"
             target="_blank" style="font-weight: bold; color: red;">
-            Click here</a> For the Prospectus
+            For the Prospectus</a>
           <br>
 
           <br>
           <a href="https://drive.google.com/file/d/1ZnOQRbI5CeBC4AAZGCAl-6xVXT_tfH2u/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: gray;">
-            Click here</a> For the Training Course Outline
+            target="_blank" style="font-weight: bold; color: red;">
+            For the Training Course Outline</a>
           <br>
           <br>
-          <a href="" style="font-weight: bold; color: black;"> Click here</a> To Register.
+          <a href="" style="font-weight: bold; color: red;"> To Register.</a>
         </p>
       </div>
 
@@ -453,7 +465,7 @@
           <br>
           <br>
 
-          <a href="" style="font-weight: bold; color: red;"> Click here</a> Radically improve your love life!
+          <a href="" style="font-weight: bold; color: red;"> Radically improve your love life!</a>
 
         </p>
       </div>
@@ -484,7 +496,7 @@
 
           <a href="https://drive.google.com/file/d/1mNcs5sre_Hl7r7lLX8PAfUiqifkreovy/view?usp=drive_link"
             target="_blank" style="font-weight: bold; color: red;">
-            Click here </a> Book your Workplace Cultural Review today!
+            Book your Workplace Cultural Review today!</a>
 
         </p>
       </div>
@@ -514,10 +526,10 @@
           <br>
 
           <a href="https://drive.google.com/file/d/189VgtpbJA-RNfxydJvmVy3zkAa6l0Jkm/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;"> Click here</a> For more information.
+            target="_blank" style="font-weight: bold; color: red;"> For more information.</a>
           <br>
           <br>
-          <a href="" style="font-weight: bold; color: black;"> Click here</a> EAP Intake Form.
+          <a href="" style="font-weight: bold; color: black;">EAP Intake Form.</a>
         </p>
       </div>
 
@@ -536,14 +548,13 @@
 
         <p>
 
-          <span style="font-weight: bold;  font-size: 1rem;">ABOUT US</span>
+          <span style="font-weight: bold;  font-size: 1rem;"></span>
           <br>
 
           <br>
 
-          For our Bios <a
-            href="https://docs.google.com/document/d/1yluDVg0cQo0QlptqdvmLQRe9qu7ZGWDyT_X-k_Sg8Zo/edit?usp=drive_link"
-            style="font-weight: bold; color: red;"> Click here</a>
+          <a href="https://docs.google.com/document/d/1yluDVg0cQo0QlptqdvmLQRe9qu7ZGWDyT_X-k_Sg8Zo/edit?usp=drive_link"
+            style="font-weight: bold; color: red;">ABOUT US</a>
 
         </p>
 

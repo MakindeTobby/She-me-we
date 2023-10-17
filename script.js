@@ -21,7 +21,7 @@ const playButton = document.querySelector('.play-btn');
 
 
 mainTimeline.addLabel('start')
-    .fromTo('.loading-text', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 10 })
+    .fromTo('.loading-text', { opacity: 1, rotation: 0 }, { opacity: 0, rotation: 0, duration: 20 })
     .to('.page1', { opacity: 1, duration: 1 })
     .to('.page1', { opacity: 0, duration: 1, delay: 5 })
     .add(() => {
@@ -105,8 +105,7 @@ function restartVideo(id) {
     // Play the video
     video.play();
 }
-function gotoSection1(id) {
-    restartVideo(id)
+function gotoSection1() {
     gsap.set('.page6', { display: 'none' });
     gsap.set('.page5', { display: 'none' });
     gsap.set('.page3', { display: 'none' });
