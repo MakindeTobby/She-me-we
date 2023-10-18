@@ -509,7 +509,9 @@
                     <br>
                     <br>
 
-                    <a href="" class="popup-link"> Radically improve your love life!</a>
+                    <a href="https://drive.google.com/file/d/1M0121D2go39hB0D8f5XghCk_i86wYovl/view?usp=share_link"
+                        class="popup-link">
+                        Radically improve your love life!</a>
 
                 </p>
             </div>
@@ -590,27 +592,29 @@
 
 
 
+
     <div class="popup" id="popup6">
         <div class="popup-inner" style="display: flex; flex-direction: column;">
+            <div class="popup-bg5">
 
+                <div class="popup__text">
 
-            <div class="popup__text">
+                    <p>
 
-                <p>
+                        <span style="font-weight: bold;  font-size: 1rem;"></span>
+                        <br>
 
-                    <span style="font-weight: bold;  font-size: 1rem;"></span>
-                    <br>
+                        <br>
+                        <h1>Coming Soon</h1>
+                        <!-- <a href="https://docs.google.com/document/d/1yluDVg0cQo0QlptqdvmLQRe9qu7ZGWDyT_X-k_Sg8Zo/edit?usp=drive_link"
+              class="popup-link">ABOUT US</a> -->
 
-                    <br>
+                    </p>
 
-                    <a href="https://docs.google.com/document/d/1yluDVg0cQo0QlptqdvmLQRe9qu7ZGWDyT_X-k_Sg8Zo/edit?usp=drive_link"
-                        class="popup-link">ABOUT US</a>
+                </div>
 
-                </p>
-
+                <a class="popup__close" href="#">&times;</a>
             </div>
-
-            <a class="popup__close" href="#">&times;</a>
         </div>
     </div>
     <div class="popup" id="popup5">
@@ -620,24 +624,25 @@
                 <div class="popup__text">
 
                     <div class="formbold-form-wrapper">
-                        <form action="" method="POST">
+                        <form action="" method="POST" id="myForm">
                             <div class="formbold-input-flex">
                                 <div>
                                     <label for="firstname" class="formbold-form-label"> Name </label>
                                     <input required type="text" name="firstname" id="firstname" placeholder="Jo"
                                         class="formbold-form-input" />
+                                    <div id="firstname-error" class="error-message"></div>
                                 </div>
 
                             </div>
                             <div class="formbold-input-flex">
                                 <div>
                                     <label for="email" class="formbold-form-label"> Email</label>
-                                    <input required type="email" name="email" id="email" placeholder="sam@mail.com"
+                                    <input required type="email" name="email" id="email" placeholder="jo@mail.com"
                                         class="formbold-form-input" />
                                 </div>
                                 <div>
                                     <label for="phone" class="formbold-form-label"> Mobile </label>
-                                    <input required type="text" name="phone" id="phone" placeholder="(+61) "
+                                    <input required type="text" name="phone" id="phone" placeholder="(+61)"
                                         class="formbold-form-input" />
                                 </div>
                             </div>
@@ -647,7 +652,7 @@
                                 <textarea rows="3" name="message" id="message" placeholder="Type your message"
                                     class="formbold-form-input"></textarea>
                             </div>
-
+                            <div id="loader" class="loader">Loading....</div>
                             <button class="formbold-btn" type="submit">
                                 Submit
                             </button>
@@ -758,6 +763,71 @@
         links.forEach(function (link) {
             link.addEventListener('mouseenter', hoverFunc);
             link.addEventListener('mouseleave', unhoverFunc);
+        });
+
+
+
+        const form = document.getElementById('myForm');
+        const loader = document.getElementById('loader');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const mailFrom = document.getElementById('firstname');
+            const subject = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const message = document.getElementById('message');
+            const recipient = "makindetobiloba9@gmail.com"
+
+
+            const firstNameError = document.getElementById('firstname-error');
+            const emailError = document.getElementById('email-error');
+            const phoneError = document.getElementById('phone-error');
+
+            // firstNameError.textContent = '';
+            // emailError.textContent = '';
+            // phoneError.textContent = '';
+
+            let valid = true;
+
+            if (mailFrom.value.trim() === '') {
+
+                firstNameError.textContent = 'Name is required';
+
+                valid = false;
+            }
+
+            if (valid) {
+                loader.classList.remove('hidden');
+                const serverUrl = 'https://profitmax-001-site10.ctempurl.com/api/Account/general_email_sending';
+
+                // Send form data to the server using the Fetch API
+                const formData = {
+                    message: message.value,
+                    recipient: 'makindetobiloba9@gmail.com',
+                    mailFrom: mailFrom.value,
+                    subject: subject.value
+                };
+                fetch(serverUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json', // Set the content type to JSON
+                        },
+                        body: JSON.stringify(formData),
+                    })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        loader.classList.add('hidden');
+                        // Handle the server response here
+                        alert('Form submitted successfully!');
+                        form.reset(); // Clear the form after submission
+                    })
+                    .catch((error) => {
+                        loader.classList.add('hidden');
+                        console.error('Error:', error);
+                        alert('An error occurred while submitting the form.');
+                    });
+            }
         });
     </script>
 

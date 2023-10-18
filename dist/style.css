@@ -56,7 +56,8 @@
 .popup-bg1,
 .popup-bg2,
 .popup-bg3,
-.popup-bg4 {
+.popup-bg4,
+.popup-bg5 {
   background-image: url(/media/groups-shemewe.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,6 +90,16 @@
 
 .popup-bg4 {
   background-image: url(/media/contact-us.jpg);
+
+}
+
+.popup-bg5 {
+  background-image: url(/media/about-us.jpg);
+
+}
+
+.popup-bg6 {
+  background-image: url(/media/coaching\ and\ mentoring.jpg);
 
 }
 
@@ -207,4 +218,15 @@
     display: none;
   }
 
+}
+
+.loader {
+
+  display: none;
+  /* Initially hidden */
+}
+
+.hidden {
+  display: none;
+  /* Hidden by default */
 }
