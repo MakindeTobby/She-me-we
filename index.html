@@ -26,7 +26,7 @@
 
   <div class="circle"></div>
   <div class="circle-follow"></div>
-  <div class="dark-background">
+  <!-- <div class="dark-background">
 
     <div class="loading-text">
       <p>
@@ -41,7 +41,34 @@
         <button onclick="gotoSect()"> <i class="fa-solid fa-house"></i></button>
       </div>
     </div>
+  </div> -->
+  <div class="page page0" id="section0">
+    <!-- <video autoplay loop muted class="img" id="sheVideo">
+        <source src="./media/water.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+
+    <!-- <div class="v_container"> -->
+    <div class="loading-text">
+      <p>
+        We acknowledge First Nations People as the Original People and Custodians of the Lands, Skies and Waterways
+        of
+        Australia. We pay our respects to the Elders of the past, present and those still emerging. We stand by
+        First
+        Nations people as they move forward, hopeful that one day their descendants and ours, can live in a country
+        where
+        their rich cultures are the strong foundation of Australia’s national identity.
+
+      </p>
+      <div class="mini-side" onclick="gotoSection()">
+        <a href="#"><i class="fa-solid fa-house"></i></a>
+      </div>
+    </div>
+
+    <!-- </div> -->
+
   </div>
+
   <audio id="background-audio" loop>
     <source src="./media/shemewe.mpeg" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -49,7 +76,7 @@
   <div class="page page1 hidden">
     <div class="img-container">
       <video autoplay loop muted class="img" id="sheVideo">
-        <source src="./media/trim.mp4" type="video/mp4">
+        <source src="./media/Shemewe bg video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <!-- <img src="./media/bg-trim.gif" alt="GIF" class="img"> -->
@@ -64,7 +91,7 @@
             <a href="#" class="p pointer" data-section="section2">he</a>
           </div>
           <div class="bg right ">
-            <a href="#" class="p pointer" data-section="section3">me</a>
+            <a href="#" onclick="gotoSection()" class="p pointer" data-section="section3">me</a>
           </div>
           <div class="bg right we">
             <a href="#" class="p pointer" data-section="section4">wé</a>
@@ -80,6 +107,8 @@
       </div>
     </div>
   </div>
+
+
   <div class="page page2 hidden" id="section1">
     <div class="img-container">
       <video autoplay loop muted class="img" id="sheVideo">
@@ -103,6 +132,7 @@
 
     </div>
   </div>
+
   <div class="page page3 hidden" id="section2">
     <div class="img-container">
       <div class="img-cont">
@@ -128,7 +158,7 @@
   </div>
   <div class="page page4 hidden" id="section3">
     <div class="img-container">
-      <video autoplay loop muted class="img" id="meVideo">
+      <video autoplay muted class="img" id="meVideo">
         <source src="./media/Sunset to Sunrise Time Lapse.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -175,11 +205,11 @@
 
 
   <div class="page6 hidden">
-    <div class="img-container6">
-      <!-- <video autoplay loop  class="img" id="myVideo">
-        <source src="./media/HKVW.gif" type="video/mp4">
+    <div class="">
+      <video autoplay loop muted class="img img-container6" id="myVideo">
+        <source src="/media/Shemewe bg video.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video> -->
+      </video>
 
       <div class="containerr">
         <div class="icon">
@@ -378,66 +408,70 @@
   <div class="popup" id="popup">
     <div class="popup-inner" style="display: flex; flex-direction: column;">
 
-      <div class="popup__text">
+      <div class="popup-bg">
+        <div class="popup__text">
+          <h2 class="popup-title"></h2>
+          <p>
+            The workplace is a significant and for some people their only village. People are
+            seeking
+            leaders to look up to and be guided by at work and in life, but widespread
+            lack of humanity, and integrity lets everyone down. Experts in the field report that 40% of the global
+            workforce is looking to quit their jobs in the next 3-6 months! Find out how to create a healthier workplace
+            culture, increase staff loyalty and employee retention.
+            <br>
+            <br>
 
-        <p>
-          The workplace is a significant and for some people their only village. People are
-          seeking
-          leaders to look up to and be guided by at work and in life, but widespread
-          lack of humanity, and integrity lets everyone down. Experts in the field report that 40% of the global
-          workforce is looking to quit their jobs in the next 3-6 months! Find out how to create a healthier workplace
-          culture, increase staff loyalty and employee retention.
-          <br>
-          <br>
+            <a href="https://drive.google.com/file/d/1ha5X0FbN67s3zX3AY_6LHMP3_HIajePR/view?usp=drive_link"
+              target="_blank" class="popup-link"> For the Prospectus</a>
+            <br>
+            <br>
 
-          <a href="https://drive.google.com/file/d/1ha5X0FbN67s3zX3AY_6LHMP3_HIajePR/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;"> For the Prospectus</a>
-          <br>
-          <br>
+            <a href="https://drive.google.com/file/d/1jYiEQmsPA5jIVPf1vcRiqoGz29GsmeA1/view?usp=drive_link"
+              target="_blank" class="popup-link"> For the Costings.</a>
+          </p>
 
-          <a href="https://drive.google.com/file/d/1jYiEQmsPA5jIVPf1vcRiqoGz29GsmeA1/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;"> For the Costings.</a>
-        </p>
-
+        </div>
+        <a class="popup__close" href="#">&times;</a>
       </div>
-      <a class="popup__close" href="#">X</a>
     </div>
   </div>
 
   <div class="popup" id="popup2">
     <div class="popup-inner" style="display: flex; flex-direction: column;">
+      <div class="popup-bg1">
+        <div class="popup__text">
+          <h2 class="popup-title"></h2>
+          <p>
+            Become a leader for positive change. Share your passion with and be supported by a diverse
+            group of like minded individuals. Use your skills in a wide range of vocations. Thrive and be the best
+            version
+            of yourself!
 
-      <div class="popup__text">
 
-        <p>
-          Become a leader for positive change. Share your passion with and be supported by a diverse
-          group of like minded individuals. Use your skills in a wide range of vocations. Thrive and be the best version
-          of yourself!
+            <br>
+            <br>
 
+            <a href="https://drive.google.com/file/d/1bzvP4Q9HkZgx_arVIwSsUwsw-SDbs29u/view?usp=drive_link"
+              target="_blank" class="popup-link">
+              For the Prospectus</a>
+            <br>
 
-          <br>
-          <br>
+            <br>
 
-          <a href="https://drive.google.com/file/d/1bzvP4Q9HkZgx_arVIwSsUwsw-SDbs29u/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;">
-            For the Prospectus</a>
-          <br>
+            <a href="https://drive.google.com/file/d/1DQc-bjMZaibGJA5VYdRxuXAYmgxCiU6N/view?usp=drive_link"
+              target="_blank" class="popup-link">
+              For the Training Course Outline</a>
+            <br>
+            <br>
+            <a href="" class="popup-link"> To Register.</a>
+          </p>
+        </div>
 
-          <br>
-
-          <a href="https://drive.google.com/file/d/1DQc-bjMZaibGJA5VYdRxuXAYmgxCiU6N/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;">
-            For the Training Course Outline</a>
-          <br>
-          <br>
-          <a href="" style="font-weight: bold; color: red;"> To Register.</a>
-        </p>
-      </div>
-
-      <a class="popup__close" href="#">X</a>
-      <!-- <a class="popup__download"
+        <a class="popup__close" href="#">&times;</a>
+        <!-- <a class="popup__download"
         href="https://drive.google.com/file/d/1Vs66SzO_owuWYwaWJ_kx4olKcFRR0oIP/view?usp=sharing"><i
           class="fa fa-window-maximize" aria-hidden="true"></i></a> -->
+      </div>
     </div>
   </div>
   <div class="popup" id="popup3">
@@ -467,78 +501,78 @@
           <br>
           <br>
 
-          <a href="" style="font-weight: bold; color: red;"> Radically improve your love life!</a>
+          <a href="" class="popup-link"> Radically improve your love life!</a>
 
         </p>
       </div>
 
-      <a class="popup__close" href="#">X</a>
+      <a class="popup__close" href="#">&times;</a>
       <!-- <a class="popup__download" href="#"><i class="fa fa-window-maximize" aria-hidden="true"></i></a> -->
     </div>
   </div>
   <div class="popup" id="popup4">
     <div class="popup-inner" style="display: flex; flex-direction: column;">
-      <div class="popup__text">
+      <div class="popup-bg2">
+        <div class="popup__text">
+          <h2 class="popup-title"></h2>
+          <p>
+            Employers are in a unique position to positively influence culture and model healthy and responsible ways to
+            work, and live. We’re seeking courageous Employers who are willing to look beyond their own gains, and
+            invest
+            in the wellness of society; leaders who value wealth in people, relationships, community, culture and our
+            world, not
+            only economically.
+            <br>
 
-        <p>
-          Employers are in a unique position to positively influence culture and model healthy and responsible ways to
-          work, and live. We’re seeking courageous Employers who are willing to look beyond their own gains, and invest
-          in the wellness of society; leaders who value wealth in people, relationships, community, culture and our
-          world, not
-          only economically.
-          <br>
-
-          Join us in creating a stronger and higher functioning society Australia wide.
+            Join us in creating a stronger and higher functioning society Australia wide.
 
 
 
 
 
-          <br>
-          <br>
+            <br>
+            <br>
 
-          <a href="https://drive.google.com/file/d/1mNcs5sre_Hl7r7lLX8PAfUiqifkreovy/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;">
-            For more information>
+            <a href="https://drive.google.com/file/d/1mNcs5sre_Hl7r7lLX8PAfUiqifkreovy/view?usp=drive_link"
+              target="_blank" class="popup-link">
+              For more information </a>
 
-        </p>
+          </p>
+        </div>
+
+
+        <a class="popup__close" href="#">&times;</a>
+        <!-- <a class="popup__download" href="#"><i class="fa fa-window-maximize" aria-hidden="true"></i></a> -->
       </div>
-
-
-      <a class="popup__close" href="#">X</a>
-      <!-- <a class="popup__download" href="#"><i class="fa fa-window-maximize" aria-hidden="true"></i></a> -->
     </div>
+  </div>
   </div>
 
   <div class="popup" id="popup7">
     <div class="popup-inner" style="display: flex; flex-direction: column;">
-      <div class="popup__text">
+      <div class="popup-bg3">
+        <div class="popup__text">
+          <h2 class="popup-title"></h2>
+          <p>
+            Stay ahead of the curve by providing culturally specific Employee Assisted Programme to your employees.
+            Support everyone within your
+            Organisation to live and work in connection to their culture of origin while contributing to and
+            participating
+            in the wider culture of their workplace, and Australia.
+            <br>
+            <br>
 
-        <p>
+            <a href="https://drive.google.com/file/d/189VgtpbJA-RNfxydJvmVy3zkAa6l0Jkm/view?usp=drive_link"
+              target="_blank" class="popup-link"> For more information.</a>
+            <br>
+            <br>
+            <a href="" class="popup-link">EAP Intake Form.</a>
+          </p>
+        </div>
 
-
-
-
-          Stay ahead of the curve by providing culturally specific Employee Assisted Programme to your employees.
-          Support everyone within your
-          Organisation to live and work in connection to their culture of origin while contributing to and participating
-          in the wider culture of their workplace, and Australia.
-
-
-
-          <br>
-          <br>
-
-          <a href="https://drive.google.com/file/d/189VgtpbJA-RNfxydJvmVy3zkAa6l0Jkm/view?usp=drive_link"
-            target="_blank" style="font-weight: bold; color: red;"> For more information.</a>
-          <br>
-          <br>
-          <a href="" style="font-weight: bold; color: red;">EAP Intake Form.</a>
-        </p>
+        <a class="popup__close" href="#">&times;</a>
+        <!-- <a class="popup__download" href="#"><i class="fa fa-window-maximize" aria-hidden="true"></i></a> -->
       </div>
-
-      <a class="popup__close" href="#">X</a>
-      <!-- <a class="popup__download" href="#"><i class="fa fa-window-maximize" aria-hidden="true"></i></a> -->
     </div>
   </div>
 
@@ -558,59 +592,59 @@
           <br>
 
           <a href="https://docs.google.com/document/d/1yluDVg0cQo0QlptqdvmLQRe9qu7ZGWDyT_X-k_Sg8Zo/edit?usp=drive_link"
-            style="font-weight: bold; color: red;">ABOUT US</a>
+            class="popup-link">ABOUT US</a>
 
         </p>
 
       </div>
 
-      <a class="popup__close" href="#">X</a>
+      <a class="popup__close" href="#">&times;</a>
     </div>
   </div>
   <div class="popup" id="popup5">
     <div class="popup-inner" style="display: flex; flex-direction: column;">
+      <div class="popup-bg4">
 
+        <div class="popup__text">
 
-      <div class="popup__text">
+          <div class="formbold-form-wrapper">
+            <form action="" method="POST">
+              <div class="formbold-input-flex">
+                <div>
+                  <label for="firstname" class="formbold-form-label"> Name </label>
+                  <input required type="text" name="firstname" id="firstname" placeholder="Sam"
+                    class="formbold-form-input" />
+                </div>
 
-        <div class="formbold-form-wrapper">
-          <form action="" method="POST">
-            <div class="formbold-input-flex">
-              <div>
-                <label for="firstname" class="formbold-form-label"> Name </label>
-                <input required type="text" name="firstname" id="firstname" placeholder="Jane"
-                  class="formbold-form-input" />
+              </div>
+              <div class="formbold-input-flex">
+                <div>
+                  <label for="email" class="formbold-form-label"> Email</label>
+                  <input required type="email" name="email" id="email" placeholder="sam@mail.com"
+                    class="formbold-form-input" />
+                </div>
+                <div>
+                  <label for="phone" class="formbold-form-label"> Mobile </label>
+                  <input required type="text" name="phone" id="phone" placeholder="(+61)" class="formbold-form-input" />
+                </div>
               </div>
 
-            </div>
-            <div class="formbold-input-flex">
               <div>
-                <label for="email" class="formbold-form-label"> Email</label>
-                <input required type="email" name="email" id="email" placeholder="jhon@mail.com"
-                  class="formbold-form-input" />
+                <label for="message" class="formbold-form-label"> Message </label>
+                <textarea rows="3" name="message" id="message" placeholder="Type your message"
+                  class="formbold-form-input"></textarea>
               </div>
-              <div>
-                <label for="phone" class="formbold-form-label"> Mobile </label>
-                <input required type="text" name="phone" id="phone" placeholder="(319) 555-0115"
-                  class="formbold-form-input" />
-              </div>
-            </div>
 
-            <div>
-              <label for="message" class="formbold-form-label"> Message </label>
-              <textarea rows="6" name="message" id="message" placeholder="Type your message"
-                class="formbold-form-input"></textarea>
-            </div>
+              <button class="formbold-btn" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
 
-            <button class="formbold-btn" type="submit">
-              Submit
-            </button>
-          </form>
         </div>
 
+        <a class="popup__close" href="#">&times;</a>
       </div>
-
-      <a class="popup__close" href="#">X</a>
     </div>
   </div>
 
@@ -622,6 +656,9 @@
   <script src="script.js">
   </script>
   <script>
+    const testing = () => {
+      console.log('hello');
+    }
     let imgBx = document.querySelectorAll(".imgBx");
     let contentBx = document.querySelectorAll(".contentBx");
     let test = document.getElementById("test")

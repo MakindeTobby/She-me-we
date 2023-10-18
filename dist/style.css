@@ -40,7 +40,7 @@
   max-width: 520px;
   max-height: 520px;
   border-radius: 50%;
-  padding: .2rem;
+  /* padding: .2rem; */
   width: 60%;
   height: 80%;
   background-color: #fff;
@@ -51,6 +51,53 @@
   /* transform: rotate(20deg);
   transition: .4s ease-in-out; */
 }
+
+.popup-bg,
+.popup-bg1,
+.popup-bg2,
+.popup-bg3,
+.popup-bg4 {
+  background-image: url(/media/groups-shemewe.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  max-width: 520px;
+  max-height: 520px;
+  border-radius: 50%;
+  padding: .2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-bg1 {
+  background-image: url(/media/training-course.jpg);
+
+}
+
+.popup-bg2 {
+  background-image: url(/media/culture\ and\ wellbeing.jpg);
+
+}
+
+.popup-bg3 {
+  background-image: url(/media/EAP-pop.jpg);
+
+}
+
+.popup-bg4 {
+  background-image: url(/media/contact-us.jpg);
+
+}
+
+
+
+
+
+
+
 
 .popup__photo {
   display: flex;
@@ -110,12 +157,12 @@
   top: -1rem;
   width: 3rem;
   height: 3rem;
-  font-size: .875rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: bold;
   border-radius: 100%;
   background-color: #0A0A0A;
   z-index: 200;
-  color: #fff;
+  color: wheat;
   line-height: 3rem;
   text-align: center;
   cursor: pointer;
@@ -138,6 +185,21 @@
   text-align: center;
   cursor: pointer;
   text-decoration: none;
+}
+
+.popup-link {
+  font-weight: bold;
+  color: red;
+}
+
+.popup-link:hover {
+  text-decoration: underline;
+}
+
+.popup-title {
+  color: #68686840;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {

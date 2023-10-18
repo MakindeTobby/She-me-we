@@ -276,14 +276,14 @@ body {
     /* border: 1px solid red; */
     max-width: 500px;
     height: 400px;
-    position: absolute;
     text-align: center;
     top: 60%;
     font-family: 'Rubik', sans-serif;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* z-index: 10000; */
+    z-index: 10000;
     padding: auto;
+    position: absolute;
 }
 
 /* .dark-background {
@@ -304,13 +304,7 @@ body {
     width: 100vw;
 }
 
-.img-container6 {
-    background-image: url(./media/bg-trim.gif);
-    background-blend-mode: multiply;
-    background-color: #1414147f;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 .img-cont {
     width: 200px;
@@ -563,8 +557,8 @@ a {
     border-color: rgba(255, 255, 255, .6);
     border-radius: 50%;
     position: absolute;
-    top: 45%;
-    z-index: 5000;
+    top: 65%;
+    z-index: 9000;
     left: 40%;
     display: flex;
     justify-content: center;
@@ -599,7 +593,8 @@ a {
 }
 
 
-.page6 {
+.page6,
+.page0 {
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -611,6 +606,11 @@ a {
 
 }
 
+.page0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .containerr {
@@ -869,7 +869,7 @@ iframe {
 #content6,
 #content7,
 #content8 {
-    background-image: url(./media/shemewe\ about\ image.jpg);
+    /* background-image: url(./media/shemewe\ about\ image.jpg); */
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -908,8 +908,7 @@ iframe {
 
 
 
-
-.formbold-main-wrapper {
+.page6 .formbold-main-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -950,7 +949,7 @@ iframe {
 }
 
 .formbold-form-input::placeholder {
-    color: #536387;
+    color: #53638761;
 }
 
 .formbold-form-input:focus {
@@ -1094,6 +1093,7 @@ iframe {
 
     .loading-text {
         padding: 0;
+        max-width: 700px;
     }
 
 }
