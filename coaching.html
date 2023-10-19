@@ -623,7 +623,7 @@
 
                 <div class="popup__text">
 
-                    <div class="formbold-form-wrapper">
+                    <div class="formbold-form-wrapper" style="margin-top: 50px;">
                         <form action="" method="POST" id="myForm">
                             <div class="formbold-input-flex">
                                 <div>
@@ -652,10 +652,14 @@
                                 <textarea rows="3" name="message" id="message" placeholder="Type your message"
                                     class="formbold-form-input"></textarea>
                             </div>
-                            <div id="loader" class="loader">Loading....</div>
                             <button class="formbold-btn" type="submit">
                                 Submit
                             </button>
+                            <div id="response-container" style="color: green;"></div>
+
+                            <div id="loader-container">
+                                <div class="loader"></div>
+                            </div>
                         </form>
                     </div>
 
@@ -766,10 +770,10 @@
         });
 
 
-
         const form = document.getElementById('myForm');
-        const loader = document.getElementById('loader');
-
+        const loaderContainer = document.getElementById("loader-container");
+        const responseContainer = document.getElementById("response-container");
+        loaderContainer.style.display = "none";
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
@@ -777,7 +781,7 @@
             const subject = document.getElementById('email');
             const phone = document.getElementById('phone');
             const message = document.getElementById('message');
-            const recipient = "makindetobiloba9@gmail.com"
+            const recipient = "info@shemewe.com.au"
 
 
             const firstNameError = document.getElementById('firstname-error');
@@ -798,7 +802,8 @@
             }
 
             if (valid) {
-                loader.classList.remove('hidden');
+                loaderContainer.style.display = "block";
+
                 const serverUrl = 'https://profitmax-001-site10.ctempurl.com/api/Account/general_email_sending';
 
                 // Send form data to the server using the Fetch API
@@ -817,13 +822,17 @@
                     })
                     .then((response) => response.json())
                     .then((data) => {
-                        loader.classList.add('hidden');
+                        loaderContainer.style.display = "none";
                         // Handle the server response here
-                        alert('Form submitted successfully!');
+                        responseContainer.innerHTML = `
+                <div class="response ${data.status ==="Success" ? "success" : "error"}">
+                    ${data.message}
+                </div>
+            `;
                         form.reset(); // Clear the form after submission
                     })
                     .catch((error) => {
-                        loader.classList.add('hidden');
+                        loaderContainer.style.display = "none";
                         console.error('Error:', error);
                         alert('An error occurred while submitting the form.');
                     });
